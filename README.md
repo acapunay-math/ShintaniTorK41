@@ -1,12 +1,12 @@
 ## Explicit Shintani domains for any totally complex quartic number field
 
-Here we give an algorithm (in PARI GP) to obtain a Shintani (fundamental) domain for any totally complex quartic number field $k$. By [Shintani's unit theorem](https://en.wikipedia.org/wiki/Shintani%27s_unit_theorem) such a domain is a finite union of (semi-closed) polyhedral cones with generators in $k$. 
+Here we give an algorithm (in [PARI GP](https://pari.math.u-bordeaux.fr/)) to obtain a Shintani (fundamental) domain for any totally complex quartic number field $k$. By [Shintani's unit theorem](https://en.wikipedia.org/wiki/Shintani%27s_unit_theorem) such a domain is a finite union of (semi-closed) polyhedral cones with generators in $k$. 
 
-Let $k$ be a totally complex quartic field, with $E$ a unit in $k$ of infinite order and $W$ a (finite) subgroup of the torsion group of $k$. For the action of the group $G=W\times\langle{E\rangle}$ on $\C^{\ast}\times\C^{\ast}$, we describe below our algorithm to obtain a Shintani domain. This implementation is based on the manuscript (abbreviated MS)
+Let $k$ be a totally complex quartic field, with $E$ a unit in $k$ of infinite order and $W$ a (finite) subgroup of the torsion group of $k$. For the action of the group $G=W\times\langle{E\rangle}$ on $\mathbb{C}^{\ast}\times\mathbb{C}^{\ast}$, we describe below our algorithm to obtain a Shintani domain. This implementation is based on the manuscript (abbreviated MS)
 
-[SHINTANI DOMAINS FOR TOTALLY COMPLEX QUARTIC FIELDS]
+[SHINTANI DOMAINS FOR TOTALLY COMPLEX QUARTIC FIELDS WITH TORSION]
 
-by A. CAPUÑAY, M. ESPINOZA AND E. FRIEDMAN.
+by A. CAPUÑAY, M. ESPINOZA AND E. FRIEDMAN, which extend the implementation given in...
 
 
 ## File description
