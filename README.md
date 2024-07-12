@@ -44,29 +44,26 @@ with
 * $E =$  fundamental unit of $k$. The unit $E$, like all other elements of $k$ below, is given as a polynomial $g$ in $\mathbb{Q}[X]$ 
        of degree at most $3$. The associated element of $k$ is the class of $g$ in $\mathbb{Q}[X]/(p)$
        
-* $r =$  is a positive integer such that for torsion of order $2$ or $4$, we can take $r=1$ if its regulator $reg(k)>0.802$, $r=3$ otherwise. For torsion of order $6$, we can take $r=1$ if $reg(k)>0.405$, $r=2$ otherwise. And we can take $r=3$ for torsion of order 8 or 12, and $r=4$ for torsion of order $10$. More details see the manuscript MS.
+* $r =$  is a positive integer such that for torsion of order $2$ or $4$, we can take $r=1$ if its regulator $reg(k)>0.802$, $r=3$ otherwise. For torsion of order $6$, $r=1$ if $reg(k)>0.405$, $r=2$ otherwise. And we can take $r=3$ for torsion of order 8 or 12, and $r=4$ for torsion of order $10$. More details see the manuscript MS.
    
-* $r' =$ is a positive integer $\leq r$ such that $E^{r'}\cdot S\subset S$, where $S$ is a polyhedral complex of cones is described in the manuscript MS. In many cases $r'=r=1$ when $reg(k)>0.802$ for all fields with torsion of order $2$, $4$ or $6$.
+* $r' =$ is a positive integer $\leq r$ such that $E^{r'}\cdot S\subset S$, where $S$ is a polyhedral complex of cones is described in the manuscript MS. Moreover, $r'=r=1$ when $reg(k)>0.802$ for all fields with torsion of order $2$, $4$ or $6$.
 
 * $N =$ number of (semi-closed) cones in the Shintani domain constructed 
 
-* $v =$ vector of four entries [#(four-cones),#(three-cones),#(two-cones),#(one-cones)] which describes information of the number semi-closed j-cones (by dimension $j=1,2,3,4$) in a Shintani domain obtained by execution of command:  $torFDK41(p,flag)$.
+* $v =$ vector of four entries [#(four-cones),#(three-cones),#(two-cones),#(one-cones)] which describes information of the number semi-closed j-cones (by dimension $j=1,2,3,4$) in a Shintani domain obtained by execution of command:  $torFDK41(p,flag)$. 
 
 
-The Shintani domain corresponds to the action on $(\mathbb{C}^{\ast})\times(\mathbb{C}^{\ast})$ of the group $G=T\times\langle{E\rangle}$.
-
-
-2. The third entry $F_2$ of $F$ (i.e., $F[2]$) has the form  
+2. The second entry $F_2$ of $F$ (i.e., $F[2]$) has the form  
 
       $$[C_1,C_2,...,C_N]$$
 
-which is a list of the $T$ (semi-closed) cones in the Shintani domain, where $N = F[1][9]$ was described above. Each cone $C_j$ is given by $\ell$ linear inequalities ($\ell$ depending on the cone) giving $\ell$ closed or open half-spaces whose intersection is $Cj$. Thus, each $C_j$ has the form  
+which is a list of the $N$ (semi-closed) cones where $N = F[1][9]$ was described above and the union of such cones form a Shintani domain for the action on $(\mathbb{C}^{\ast})\times(\mathbb{C}^{\ast})$ of the group $G=T\times\langle{E\rangle}$, with $T$ subgroup of the torsion group whose generators is $b_2=F[1][5][2][2]\in k$ which is of order $a_2=F[1][5][2][1]$. Each cone $C_j$ is given by $\ell$ linear inequalities ($\ell$ depending on the cone) giving $\ell$ closed or open half-spaces whose intersection is $Cj$. Thus, each $C_j$ has the form  
 
   $$[v_1,v_2,...,v_{\ell}]$$
 
 where $v_i=[w,1]$ or $[w,-1]$ and $w$ is an element of $k$ (depending on $i$ and $j$). If $w$ is followed by $1$, then the corresponding (closed) half-space is the set of elements $x$ of $\mathbb{R}^4$ with $\text{Trace}(xw) \geq 0$. If $w$ is followed by $-1$, then the corresponding (open) half-space is given by $\text{Trace}(xw) > 0$. Here Trace is the extension to $\mathbb{R}^4$ of the trace map from $k$ to $\mathbb{Q}$.
 
-3. The fourth entry $F_3$ of $F$ (i.e., $F[3]$) has the form  
+3. The third entry $F_3$ of $F$ (i.e., $F[3]$) has the form  
 
       $$[CC_1,CC_2,...,CC_N]$$
 
