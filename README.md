@@ -4,7 +4,7 @@ Let $k$ be a totally complex quartic number field, with $E$ a unit in $k$ of inf
 
 [SHINTANI DOMAINS FOR TOTALLY COMPLEX QUARTIC FIELDS WITH TORSION]
 
-by A. CAPUÑAY, M. ESPINOZA AND E. FRIEDMAN, which extend our implementation in [ATTRACTOR-REPELLER CONSTRUCTION](https://github.com/acapunay-math/ShintaniK41/tree/main/Algorithm) given for the case when $G=\langle{E\rangle}$ (torsion-free $T$).
+by A. CAPUÑAY, M. ESPINOZA AND E. FRIEDMAN, which extend our implementation in [ATTRACTOR-REPELLER](https://github.com/acapunay-math/ShintaniK41/tree/main/Algorithm) given for the case when $G=\langle{E\rangle}$ (torsion-free $T$).
 
 ## File description
 
@@ -17,16 +17,16 @@ Here this GP function has one mandatory input $p$, and an optional one, $flag$, 
 
   * $flag = 0$ (default): you can type $torFDK41(p)$ or $torFDK41(p,0)$ both return the same result. In this case the data $F$ obtained (described below) represents information about of a Shintani domain for the action on $\mathbb{C}^{\ast}\times\mathbb{C}^{\ast}$ of the group $G=W\times\langle{E\rangle}$, where $W$ is the (full) torsion group for $k$ (obtained by PARI/GP).
       
-  * $flag = 1$: if you type $torFDK41(p,1)$ you get the same data (with 4 entries) described in [Click](https://github.com/acapunay-math/ShintaniK41/tree/main/Algorithm) by the command $FDK41(p)$, which returns information of a Shintani domain for action of the group $G=\langle{E\rangle}$ (torsion-free $T$).
+  * $flag = 1$: if you type $torFDK41(p,1)$ you get the same data (with 4 entries) described in [ATTRACTOR-REPELLER](https://github.com/acapunay-math/ShintaniK41/tree/main/Algorithm) by the command $FDK41(p)$, which returns information of a Shintani domain for action of the group $G=\langle{E\rangle}$ (torsion-free $T$).
   
   * $flag = m>1$: if you know a priori the order of the torsion group $W$ of $k$, then $m$ is a divisor of the order of $W$. In this case you can type $torFDK41(p,m)$ to obtain a data $F$ about a Shintani domain for the action of $G=W'\times\langle{E\rangle}$, where now $W'$ represents a subgroup of order $m$ of the torsion group $W$ of $k$.
   
   
-So, leaving aside the case $flag=1$, we explain the data obtained in $F$ for the case when $flag=0$ or $flag>1$. This $F$ returns a list of form $F:=[F_1,F_2,F_3]$ which asociated to a Shintani domain interpreted as follows:
+So, leaving aside the case $flag=1$, we explain the data obtained in $F$ for the case when $flag=0$ or $flag>1$. This $F$ returns a list of three entries of form $F:=[F_1,F_2,F_3]$ interpreted as follows:
 
 1. The first entry $F_1$ (i.e., $F[1]$) has the form 
 
-      $$[t,p,reg,disc,W,E,r,T]$$
+      $$[t,p,reg,disc,W,E,r,N]$$
 
 with 
 
@@ -47,16 +47,16 @@ $E =$  fundamental unit of $k$. The Shintani domain corresponds to the action on
        
 $r =$  minimal positive integer with $|E_1|^{2r} < 0.184$ as in display $(34)$ of Ms. Here $E_1$ is an embedding of $E$ in $\mathbb{C}$
    
-$T =$  number of 4-cones in the Shintani domain constructed 
+$N =$  number of 4-cones in the Shintani domain constructed 
 
 
 2. The third entry $F_2$ of $F$ (i.e., $F[2]$) has the form  
 
-      $$[C_1,C_2,...,C_T]$$
+      $$[C_1,C_2,...,C_N]$$
 
-which is a list of the $T$ (semi-closed) cones in the Shintani domain, where $T = F[1][7]$ was described above. Each cone $C_j$ is given by $m$ linear inequalities ($m$ depending on the cone) giving $m$ closed or open half-spaces whose intersection is $Cj$. Thus, each $Cj$ has the form  
+which is a list of the $T$ (semi-closed) cones in the Shintani domain, where $N = F[1][10]$ was described above. Each cone $C_j$ is given by $\ell$ linear inequalities ($\ell$ depending on the cone) giving $\ell$ closed or open half-spaces whose intersection is $Cj$. Thus, each $C_j$ has the form  
 
-  $$[v_1,v_2,...,v_m]$$
+  $$[v_1,v_2,...,v_{\ell}]$$
 
 where $v_i=[w,1]$ or $[w,-1]$ and $w$ is an element of $k$ (depending on $i$ and $j$). If $w$ is followed by $1$, then the corresponding (closed) half-space is the set of elements $x$ of $\mathbb{R}^4$ with $\text{Trace}(xw) \geq 0$. If $w$ is followed by $-1$, then the corresponding (open) half-space is given by $\text{Trace}(xw) > 0$. Here Trace is the extension to $\mathbb{R}^4$ of the trace map from $k$ to $\mathbb{Q}$.
 
