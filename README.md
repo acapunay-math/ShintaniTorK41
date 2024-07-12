@@ -4,7 +4,7 @@ Let $k$ be a totally complex quartic number field, with $E$ a unit in $k$ of inf
 
 [SHINTANI DOMAINS FOR TOTALLY COMPLEX QUARTIC FIELDS WITH TORSION]
 
-by A. CAPUÑAY, M. ESPINOZA AND E. FRIEDMAN, which extend our implementation given in [ATTRACTOR-REPELLER CONSTRUCTION](https://github.com/acapunay-math/ShintaniK41/tree/main/Algorithm) given for the case when $G=\langle{E\rangle}$ (torsion-free $T$).
+by A. CAPUÑAY, M. ESPINOZA AND E. FRIEDMAN, which extend our implementation in [ATTRACTOR-REPELLER CONSTRUCTION](https://github.com/acapunay-math/ShintaniK41/tree/main/Algorithm) given for the case when $G=\langle{E\rangle}$ (torsion-free $T$).
 
 ## File description
 
