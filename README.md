@@ -1,12 +1,10 @@
 ## Explicit Shintani domains for totally complex quartic number fields
 
-Here we give an algorithm (in [PARI/GP](https://pari.math.u-bordeaux.fr/)) to obtain a Shintani (fundamental) domain for any totally complex quartic number field $k$. By [Shintani's unit theorem](https://en.wikipedia.org/wiki/Shintani%27s_unit_theorem) such a domain is a finite union of (semi-closed) polyhedral cones with generators in $k$. 
-
-Let $k$ be a totally complex quartic field, with $E$ a unit in $k$ of infinite order and $W$ a (finite) subgroup of the torsion group of $k$. For the action of the group $G=W\times\langle{E\rangle}$ on $\mathbb{C}^{\ast}\times\mathbb{C}^{\ast}$, we describe below our algorithm to obtain a Shintani domain. This implementation is based on the manuscript (abbreviated MS)
+Let $k$ be a totally complex quartic field, with $E$ a unit in $k$ of infinite order and $W$ a (finite) subgroup of the torsion group of $k$. For the action of the group $G=W\times\langle{E\rangle}$ on $\mathbb{C}^{\ast}\times\mathbb{C}^{\ast}$, we describe below our algorithm to obtain a Shintani (fundamental) domain implemented in [PARI/GP](https://pari.math.u-bordeaux.fr/). By [Shintani's unit theorem](https://en.wikipedia.org/wiki/Shintani%27s_unit_theorem) such a domain is a finite union of (semi-closed) polyhedral cones with generators in $k$. This implementation is based on the manuscript (abbreviated MS)
 
 [SHINTANI DOMAINS FOR TOTALLY COMPLEX QUARTIC FIELDS WITH TORSION]
 
-by A. CAPUÑAY, M. ESPINOZA AND E. FRIEDMAN, which extend our implementation given in [ATTRACTOR-REPELLER CONSTRUCTION](https://github.com/acapunay-math/ShintaniK41)
+by A. CAPUÑAY, M. ESPINOZA AND E. FRIEDMAN, which extend our implementation given in [ATTRACTOR-REPELLER CONSTRUCTION](https://github.com/acapunay-math/ShintaniK41).
 
 ## File description
 
@@ -17,9 +15,9 @@ $(I).$ After uploading the file `ShintaniTorK41.gp` in Pari/GP, using an irreduc
  ```
 Here this GP function has one mandatory input $p$, and an optional one, flag, whose meaning is as follows:
 
-  * $flag = 0$ (default), so you can type $torFDK41(p)$ or $torFDK41(p,0)$ both return the same result. In this case the data $F$ (described below) represent a Shintani domain for the action on $\mathbb{C}^{\ast}\times\mathbb{C}^{\ast}$ of the group $G=W\times\langle{E\rangle}$, where $W$ is the (full) torsion group for $k$ given by PARI/GP.
+  * $flag = 0$ (default), so you can type $torFDK41(p)$ or $torFDK41(p,0)$ both return the same result. In this case the data F obtained (described below) represent a Shintani domain for the action on $\mathbb{C}^{\ast}\times\mathbb{C}^{\ast}$ of the group $G=W\times\langle{E\rangle}$, where $W$ is the (full) torsion group for $k$ (obtained by PARI/GP).
       
-  * $flag = m>0$, 
+  * $flag = m>0$, if you know a priori the order of the torsion group of $k$, then $m$ is a divisor of such order. Thus this return a data F about a Shintani domain for the action of $G=W\times\langle{E\rangle}$, where now $W$ represent a subgroup of the torsion group of $k$.
 
 
 This returns a list $F:=[F_1,F_2,F_3]$ asociated to a Shintani domain interpreted as follows
