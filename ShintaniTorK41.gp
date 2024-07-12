@@ -7,7 +7,7 @@
 torFDK41(p,flag)= 
 {my(k,t,F,m);
 m=flag;
-if(m>0,F=FD(p,m),k=bnfinit(p); t=k.tu[1]; F=FD(p,t)); \\it's necessary that m would be a divisor of t
+if(m==0,k=bnfinit(p); t=k.tu[1]; F=FD(p,t), F=FD(p,m));
 return(F);
 }
 
