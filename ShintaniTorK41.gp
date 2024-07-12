@@ -80,6 +80,24 @@ return(F);
 
 
 /*****************************************************************************************************************/
+
+ExamplestorK41(L)= \\ return a file of explicit Shintani domains from a list as input L=[list of polynomials]
+{my(F,tm);
+write(ShK41,"examples = [\\");
+for(j=1,#L-1,
+   tm=getwalltime();
+   F=torFDK41(L[j]);
+   write(ShK41,"",F,",\\");
+   print1([[j],getwalltime()-tm]);
+   );
+tm=getwalltime();
+F=torFDK41(L[#L]);
+write(ShK41,"",F,"\\");
+print1([[#L],getwalltime()-tm]);
+write(ShK41,"];");
+}
+
+
 TorshK41(S)= \\S=list of totally complex quartic polynomials
 {my(t1,F,D);
 for(j=1,#S,

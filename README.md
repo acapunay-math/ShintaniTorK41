@@ -69,13 +69,15 @@ where $v_i=[w,1]$ or $[w,-1]$ and $w$ is an element of $k$ (depending on $i$ and
 
 where $CC_j$ is the closure in $\mathbb{R}^4$ of the cone $C_j$ in $F_3$. Each closed cone $CC_j$ is given here by a list of generators in $k$.
 
-
-$(II)$ A list of examples is given in 
-
 $(II).$ If you want to obtain Shintani domains for a list of (totally complex quartic) polynomials `L`, you can use the command
 
   ```bash
-  ShintaniExamplesK41(L)
+  ExamplestorK41(L)
   ```
 
-This creates a file with Shintani domains via the command `FDK41(p)` for each polynomial `p` of the list `L`
+This creates a file with Shintani domains via the command `torFDK41(p)` for each polynomial `p` of the list `L`.
+
+$(III).$ In the folder we give a list of 20 examples of Shintani domains which can be read using PARI/GP and SAGE.
+
+
+
