@@ -1,14 +1,13 @@
-\\ update june 2024
+\\ update 2024
 
 \\ Input: Let p be an irreducible quartic polynomial which defines a totally complex quartic field k.
 
-\\ Output: F=FD(p,t), where t=order of the torsion group of k.
+\\ Output: F=FD(p,t), where t=order of the torsion group of k or a divisor of such order.
 
-torFDK41(p)= 
-{my(k,t,F);
-k=bnfinit(p); t=k.tu[1];
-F=FD(p,t); 
-\\ you can also to determine a Shintani domain for a torsion subgroup, putting a divisor of t
+torFDK41(p,flag)= 
+{my(k,t,F,m);
+m=flag;
+if(m>0,F=FD(p,m),k=bnfinit(p); t=k.tu[1]; F=FD(p,t)); \\it's necessary that m would be a divisor of t
 return(F);
 }
 
@@ -24,7 +23,7 @@ return(F);
 \\  if m=1, then this returns a Shintani domain for a torsion-free subgroup of the units group of k.
 
 FD(p,m)=
-{my(k,E,v,v1,t,w,w1,wp,rg,e,F,S,C1,r,ut,C2,T,L,f,tm,a,d,Cineq,Cgen,h1,h2,D,dim,Df,mr,Cineq1,Cineq2,Cgen1,Cgen2);
+{my(k,E,v,v1,t,w,w1,wp,rg,e,F,S,C1,r,ut,C2,T,L,f,tm,a,d,Cineq,Cgen,h1,h2,h3,D,dim,Df,mr,Cineq1,Cineq2,Cgen1,Cgen2);
 tm=getwalltime();
 k=bnfinit(p,1);   \\ flag=1
 E=topu(k)[1]; v=conjvec(Mod(E,p)); if(abs(v[1])>1, E=lift(Mod(E^(-1),p)));   \\ <E> free part of the group G, with abs(E[1])<1
@@ -32,7 +31,7 @@ E=topu(k)[1]; v=conjvec(Mod(E,p)); if(abs(v[1])>1, E=lift(Mod(E^(-1),p)));   \\ 
 rg=precision(k.reg,10);
 e=t/m;
 if(type(e)=="t_INT" && m>0 && type(m)=="t_INT",
-if(m==1,F=FDK41(p),  \\here FDK41 return a Shintani domain for free-torsion groups G=<E> of the units group of k
+if(m==1,F=FDK41(p);h3=F[1][7],  \\here FDK41 return a Shintani domain for free-torsion groups G=<E> of the units group of k
    S=TorAttractor(k);
    C1=kcomplex(S,k);
    if(t==2 || t==4, if(rg>0.802, r=1, r=3));
@@ -71,7 +70,8 @@ if(m==1,F=FDK41(p),  \\here FDK41 return a Shintani domain for free-torsion grou
                               Cineq2=concat(Cineq2,[Cineq[j]]); Cgen2=concat(Cgen2,[Cgen[j]]));
    );
   Cineq=concat(Cineq1,Cineq2); Cgen=concat(Cgen1,Cgen2);
-  F=[d, Cineq, Cgen]),
+  F=[d, Cineq, Cgen];h3=dim[1]);
+  print1(" A Shintani domain have been obtained with " h3 " semi-closed polyhedral four-cones"),
   \\F=[d,T]),
   warning("...The number entered " m " must be a natural number and divide the order of the torsion group, which is " t ".");
 );
@@ -130,7 +130,7 @@ minr(S,E,r,k)= \\ we want to determine the minimum r' such that E^(r')*S is cont
       );
    Df[h]=concat(T); \\ E^(h)*S-S
    );
-v=vector(r,j,#Df[j]); a=vfind(v,0);
+v=vector(r,j,#Df[j]); a=vfind([v,0]);
 return([Df,a]);
 }
 
@@ -235,21 +235,21 @@ Q=vector(#P[2],j, [P[2][j],P[3][j]]); \\ vectores [polymod, signs +/-1]
 for(j=1,#Q, Q[j][1]=Q[j][1]/abs(content(Q[j][1]))); \\ normalization
 H1=[v|v<-Q, v[2]==+1]; \\ list of ineqs>=0 in P
 H2=[v|v<-Q, v[2]==-1]; \\ list of ineqs>0 in P
-Vp=[]; for(j=1,#H1, certp=vfind(Vp,H1[j]); if(certp==0, Vp=concat(Vp,[H1[j]])));
-Vn=[]; for(j=1,#H2, certn=vfind(Vn,H2[j]); if(certn==0, Vn=concat(Vn,[H2[j]])));
-Vpp=[]; for(j=1,#Vp, certpp=vfind(Vn,[Vp[j][1],-1]); if(certpp==0, Vpp=concat(Vpp,[Vp[j]]))); \\ "H>=0 and H>0" implies "H>0"
+Vp=[]; for(j=1,#H1, certp=vfind([Vp,H1[j]]); if(certp==0, Vp=concat(Vp,[H1[j]])));
+Vn=[]; for(j=1,#H2, certn=vfind([Vn,H2[j]]); if(certn==0, Vn=concat(Vn,[H2[j]])));
+Vpp=[]; for(j=1,#Vp, certpp=vfind([Vn,[Vp[j][1],-1]]); if(certpp==0, Vpp=concat(Vpp,[Vp[j]]))); \\ "H>=0 and H>0" implies "H>0"
 C=concat(Vpp,Vn);      \\version of P without repeating inequalities.
 \\step 1: obtains irredundant inequalities "> or >=" of P which defines a 3-face of the closure(P)
 CoP=HV(P[1],bnf);      \\[R-repres, H-repres] representation of the closure(P)
 CoH=CoP[2];            \\ list of irredundant ineqs in the closure(P)
 Cp1=[]; Cn1=[];
 for(j=1,#CoH, 
-   ineq=CoH[j]; certp1=vfind(C,[ineq,1]);
+   ineq=CoH[j]; certp1=vfind([C,[ineq,1]]);
    if(certp1==0, Cn1=concat(Cn1,[[ineq,-1]]), Cp1=concat(Cp1,[[ineq,+1]]) );
    );
 C1=concat(Cp1,Cn1);  \\ version of P satisfying step 0 and 1
 \\step 2: finally we need to see if is neccessary to add some inequalities ">" of P which defines an open e-face (with e<3) of P
-Dn=[v|v<-Vn, vfind(Cn1,v)==0];  \\strict inequalities ">" no considered in "Cn1" contained in "Vn" (if Vn is no empty)
+Dn=[v|v<-Vn, vfind([Cn1,v])==0];  \\strict inequalities ">" no considered in "Cn1" contained in "Vn" (if Vn is no empty)
 if(#Dn==0, C2=C1,
    Ry=vector(#Dn,j,[r|r<-CoP[1], nfelttrace(nf,Dn[j][1]*r)==0]);
    Dim=vector(#Dn,j,ncheck(Ry[j],bnf)[1]);
@@ -259,15 +259,15 @@ if(#Dn==0, C2=C1,
    F0=vector(#dm[3],j,[Dn[dm[3][j]],Ry[dm[3][j]]]); \\ Union(F2[1],F1[1],F0[1])=Dn
    if(#dm[1]>0, \\2-faces
      for(j=1,#dm[1], rs1=lift(Mod(vecsum(F2[j][2]),p)); Hn1=vector(#Cn1,j,nfelttrace(nf,Cn1[j][1]*rs1));
-         if(vfind(Hn1,0)==0, Cn1=concat(Cn1,[F2[j][1]])));
+         if(vfind([Hn1,0])==0, Cn1=concat(Cn1,[F2[j][1]])));
      );     
    if(#dm[2]>0, \\1-faces 
        for(j=1,#dm[2], rs2=lift(Mod(vecsum(F1[j][2]),p)); Hn2=vector(#Cn1,j,nfelttrace(nf,Cn1[j][1]*rs2));
-         if(vfind(Hn2,0)==0, Cn1=concat(Cn1,[F1[j][1]])));
+         if(vfind([Hn2,0])==0, Cn1=concat(Cn1,[F1[j][1]])));
      );      
    if(#dm[3]>0,  \\0-faces
       for(j=1,#dm[3], rs3=lift(Mod(vecsum(F0[j][2]),p)); Hn3=vector(#Cn1,j,nfelttrace(nf,Cn1[j][1]*rs3));
-         if(vfind(Hn3,0)==0, Cn1=concat(Cn1,[F0[j][1]])));
+         if(vfind([Hn3,0])==0, Cn1=concat(Cn1,[F0[j][1]])));
      ); 
   C2=concat(Cp1,Cn1);   
 );
@@ -319,7 +319,7 @@ C=v[1][1]; \\ V-repre. of a cone
 H=v[1][2]; \\ its H-repre.
 L=v[2];    \\ these are H-reprs. that we want add to cone [C,H].
 for(j=1,#L,
-    R=AddC([L[j],C,H],d); 
+    R=AddC([[L[j],C,H],d]); 
     [C,H]=R;     \\ new cone V-repres. and H-repres.
     );
 return([C,H]);  
@@ -372,8 +372,8 @@ C=vector(#S,j);
 for(j=1,#P-1,
      \\q=setintersect(Set(P[j][2]),Set(-P[j+1][2]))[1]; 
      g=setintersect(Set(P[j][1]),Set(P[j+1][1])); \\ intersection of generators of the cones P[j] and P[j+1]
-     hf=P[j][2]; tr=vector(#hf,i,vecsum(vector(#g,j,nfelttrace(bnf.nf,g[j]*hf[i])))); h=vfind(tr,0);
-     \\h=vfind(P[j][2],q); 
+     hf=P[j][2]; tr=vector(#hf,i,vecsum(vector(#g,j,nfelttrace(bnf.nf,g[j]*hf[i])))); h=vfind([tr,0]);
+     \\h=vfind([P[j][2],q]); 
      a=vector(#P[j][2],i,1); a[h]=-1;
      C[j]=concat(P[j],[a]);
 );
@@ -541,9 +541,9 @@ HV(v,d)=  \\ v define an H-representation (respec. V-repren.) of an n-dimensiona
 {my(w,S,L,R); 
 w=check(v,d);     \\ taking a subset of n independent linear vectors on V_Q in the set v. (w subcollections of H-reprs.)
 S=HV1(w,d);       \\ transformation of w on a V-repr.
-L=[g|g<-v, vfind(w,g)==0];     \\these are the H-reprs. that we want add to the  cone w (or S)
+L=[g|g<-v, vfind([w,g])==0];     \\these are the H-reprs. that we want add to the  cone w (or S)
 for(j=1,#L,
-    R=AddC([L[j],S,w],d);  \\ add H-repr. L[j] to the V-repr. initial S=HV1(T[1],d).
+    R=AddC([[L[j],S,w],d]);  \\ add H-repr. L[j] to the V-repr. initial S=HV1(T[1],d).
     [S,w]=R;
     );
 return([v,S]);  \\ we note that if v is an H-repre (respec. V-repre) then S is V-repre (respec. H-repre) with S is irredundant ("By duality").
@@ -591,12 +591,13 @@ return(E);    \\ E is a subset of n vectors on v independent linear in V_Q. If E
 
 /*Algorithm for verify when two (extreme) rays (v1,v2) in P(A) are neighbour or adjacent on P(A):=[w_1,...,w_m]:={x : tr(w_jx) >= 0} given*/
 /*** INPUT: Given two rays v1 and v2 on a polyhedral cone P(A)=H-representation */ 
-/*** T=[[v1,v2],P(A)] is a triple; d=bnfinit(k) */
+/*** T=[[v1,v2],P(A)] is a triple; d=bnfinit(poly) */
 
 /*** OUTPUT: return 1 if both rays generate a 2-dimensional face on the cone P(A), 0 otherwise */ 
 
-nbour(T,d)=         
+nbour(v)=         
 {my(nf,v1,v2,A,S,n,Z1,Z2,Z,B,C,f);
+[T,d]=v;
 [v1,v2]=T[1]; A=T[2];     \\ all the elements of A be in K (warning!: here is necessary that P(A) be an H-representation)
 S=[1..#A]; n=d.r1+2*d.r2; nf=d.nf;
 Z1=[j|j<-S, nfelttrace(nf,A[j]*v1)==0]; \\ zone of zeros of ray v1
@@ -618,15 +619,16 @@ return(f);             \\f=1 means that the rays v1 and v2 are neighbour (or adj
 
 /*** OUTPUT: return a new cone with this inequality added */ 
 
-AddC(v,d)=         
+AddC(A)=         
 {my(nf,w,R,L,Rp,Rn,R0,T,S,ray,e,f);
+[v,d]=A;
 nf=d.nf;
 [w,R,L]=v;
 Rp=[r|r<-R, nfelttrace(nf,w*r)>0];   \\ set of positive rays on R respect to hyperplane "tr(wx)=0" generated by the restriction.
 Rn=[r|r<-R, nfelttrace(nf,w*r)<0];   \\ similarly (negative rays)
 R0=[r|r<-R, nfelttrace(nf,w*r)==0];  \\ similarly (zero rays)
 T=[[a,b]|a<-Rp;b<-Rn];               \\ this is the set of pairs of rays positives and negatives respect to restriction "tr(wx)"
-if(#T==0,S=[], T=[ad|ad<-T, nbour([ad,L],d)==1];  \\ here we consider only the adjacent pairs.
+if(#T==0,S=[], T=[ad|ad<-T, nbour([[ad,L],d])==1];  \\ here we consider only the adjacent pairs.
     S=vector(#T,j);
     for(j=1,#T, e=T[j][1]; f=T[j][2]; ray=nfelttrace(nf,w*e)*f-nfelttrace(nf,w*f)*e; S[j]=ray/abs(content(ray)));
   );
@@ -640,8 +642,9 @@ return([R,L]);   \\ new V-repr (without redundancies) and H-repr of the cone whe
 /*** INPUT: given a vector(v) and a element (elmnt)  */
 /*** OUTPUT: verify if such element is in the vector given  */ 
 
-vfind(v,elmnt)=
-{my(l);
+vfind(w)=
+{my(l,v,elmnt);
+[v,elmnt]=w;
 l=0;
 for(j=1,length(v),
     if(v[j]==elmnt,l=j; break(1));   \\ comparation between two polymods if such elements belongs to a number field.
@@ -681,7 +684,7 @@ tim1=getwalltime()-tim1;
 c=[tim1, p, precision(K.reg,10), K.disc, u, r, a];
 Cineq=vector(a,i,vector(#T[i][2],j,[T[i][2][j],T[i][3][j]])); \\ [inequality, + or -1], "+1" means ">=0"; "-1" means ">0"
 Cgen=vector(a,i,T[i][1]); \\ list of cones given generators which represent the closure of the cones in "Cineq"
-V=[c, KB, Cineq, Cgen]; 
+V=[c, Cineq, Cgen]; 
 return(V); \\ V=data of the shintani domain of number field generated by the polynomial"p" which contains 4 entries
 }
 
