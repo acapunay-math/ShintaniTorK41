@@ -79,14 +79,14 @@ This creates a file with Shintani domains via the command `torFDK41(p)` for each
 
 $(III).$ We show a list of 20 examples of Shintani domains in:
 
-* The file [ShK41.txt](https://github.com/acapunay-math/ShintaniTorK41/blob/main/ShK41.txt) which can be read by PARI/GP via the command
+* The file [ShK41.txt](https://github.com/acapunay-math/ShintaniTorK41/blob/main/ShK41.txt) can be read by PARI/GP via the command
 
         \r ShK41.txt
 
-* The file [ShK41-ML.sage](https://github.com/acapunay-math/ShintaniTorK41/blob/main/ShK41-ML.sage) which can be read by SAGE-Math via the command 
+* The file [ShK41-ML.sage](https://github.com/acapunay-math/ShintaniTorK41/blob/main/ShK41-ML.sage) can be read by SAGE-Math via the command 
 
          load('ShK41-ML.sage')
          
 
-In both files returns a list of size 20 as a vector: $examples=[E1,\ldots,E{20}]$ which each $Ej$ has the structure described above in $(I)$.
+In both files returns a list of size 20 as a vector: $examples=[E1,\ldots,E{20}]$ which each $Ej$ has the structure described above in item $(I)$.
 
