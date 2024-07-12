@@ -46,7 +46,7 @@ with
        
 * $r =$  is a positive integer such that for torsion of order $2$ or $4$, we can take $r=1$ if its regulator $reg(k)>0.802$, $r=3$ otherwise. For torsion of order $6$, we can take $r=1$ if $reg(k)>0.405$, $r=2$ otherwise. And we can take $r=3$ for torsion of order 8 or 12, and $r=4$ for torsion of order $10$. More details see the manuscript MS.
    
-* $r' =$ is a positive integer $\leq r$ such that $E^{r'}\cdot S\subset S$, where $S$ is a polyhedral complex of cones is described in the manuscript MS.
+* $r' =$ is a positive integer $\leq r$ such that $E^{r'}\cdot S\subset S$, where $S$ is a polyhedral complex of cones is described in the manuscript MS. In many cases $r'=r=1$ when $reg(k)>0.802$ for all fields with torsion of order $2$, $4$ or $6$.
 
 * $N =$ number of (semi-closed) cones in the Shintani domain constructed 
 
