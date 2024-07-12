@@ -24,7 +24,7 @@ Here this GP function has one mandatory input $p$, and an optional one, $flag$, 
   
 So, leaving aside the case $flag=1$, we explain the data obtained in $F$ for the case when $flag=0$ or $flag>1$. This $F$ returns a list of three entries of form $F:=[F_1,F_2,F_3]$ interpreted as follows:
 
-1. The first entry $F_1$ (i.e., $F[1]$) has the form 
+1. The first entry $F_1$ (i.e., $F[1]$) has 10 entries of the form 
 
       $$[t,p,reg,disc,tor,E,r,N]$$
 
