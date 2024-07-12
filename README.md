@@ -77,13 +77,13 @@ $(II).$ If you want to obtain Shintani domains for a list of (totally complex qu
 
 This creates a file with Shintani domains via the command `torFDK41(p)` for each polynomial `p` of the list `L`.
 
-$(III).$ We show a list of 20 examples of Shintani domains in:
+$(III).$ We show a list of 20 examples of Shintani domains:
 
-* The file [ShK41.txt](https://github.com/acapunay-math/ShintaniTorK41/blob/main/ShK41.txt) can be read by PARI/GP via the command
+* File [ShK41.txt](https://github.com/acapunay-math/ShintaniTorK41/blob/main/ShK41.txt) can be read by PARI/GP via the command
 
         \r ShK41.txt
 
-* The file [ShK41-ML.sage](https://github.com/acapunay-math/ShintaniTorK41/blob/main/ShK41-ML.sage) can be read by SAGE-Math via the command 
+* File [ShK41-ML.sage](https://github.com/acapunay-math/ShintaniTorK41/blob/main/ShK41-ML.sage) can be read by SAGE-Math via the command 
 
          load('ShK41-ML.sage')
          
