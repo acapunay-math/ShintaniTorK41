@@ -45,13 +45,13 @@ with
 
 2. The second entry $a_2$ of $D_i$ (i.e., $data[i][2]$) has the form  
 
-   $$[\tilde{e}_1,\tilde{e}_2,\tilde{e}_3,\tilde{e}_4]$$
+  $$[\tilde{e}_1,\tilde{e}_2,\tilde{e}_3,\tilde{e}_4]$$
 
 where $\tilde{e}_j$ (for $1\leq j\leq 4$) is an element of $k$ approximating the $j$-th element of the standard basis of $\mathbb{R}^4 = \mathbb{C}^2$, wherein $k$ is embedded. The error bound $\varepsilon$ used in this approximation was $1/150$. 
 
 3. The third entry $a_3$ of $D_i$ (i.e., $data[i][3]$) has the form 
  
-   $$[C'_1,C'_2,...,C'_m],$$
+  $$[C'_1,C'_2,...,C'_m],$$
  
 which represents a polyhedral complex of $m$ four-dimensional $k$-rational semi-closed cones:
  
@@ -69,7 +69,7 @@ Since each cone $C_j'$ is simplicial, then each $C_j'$ has $\ell=4$ closed or op
 
 4. The fourth entry $a_4$ of $D_i$ (i.e., data[i][4]) has the form  
 
-  $$[CC_1,CC_2,...,CC_N]$$
+  $$[CC_1,CC_2,...,CC_m]$$
 
 where $CC_j$ is the closure in $\mathbb{R}^4$ of the cone $C_j'$ in $a_3$. Each closed cone $CC_j$ is given here by a list of generators in $k$.    
  
@@ -83,7 +83,7 @@ which represents a polyhedral complex of three 4-dimensional $k$-rational semi-c
 
 where $P^{\Delta,\Gamma}(c)$ is the polyhedral complex described in the Lemma 10 (page 158) of our article: [ATTRACTOR-REPELLER](https://www.sciencedirect.com/science/article/pii/S0022314X23002299) and the map $f$ is an $\varepsilon$-perturbation linear of identity described in Section 4.4 of this article (with $\varepsilon\leq 1/150$). Moreover to build such $R_f$ we consider the values: $(c,m)=(1/5,8), (1/6,10), (1/8,10)$ and we take
 
-$$\Delta = \Gamma = \left[(1,0), (-1/2,\alpha), (-1/2,-\alpha)\right] \approx [1,\zeta_3,\zeta_3^2],\qquad \alpha:=\dfrac{2521}{2911}$$ 
+$$\Delta = \Gamma = \left[(1,0), (-1/2,\alpha), (-1/2,-\alpha)\right] \approx [1,\zeta_3,\zeta_3^2],\qquad \alpha:=\dfrac{2521}{2911},$$ 
 
 which represents a triangle with vertices in $\mathbb{Q}^2$ in the complex plane $\mathbb{C}$ such that their vertices are an approximation of the unit cubic roots, $\zeta_3=\text{exp}(2\pi i/3)$. 
 
@@ -101,7 +101,7 @@ where $QQ_j$ is the closure in $\mathbb{R}^4$ of the cone $Q_j$ in $a_5$. Each c
 
 If $R_{f}-S=[\quad]$, then $R_{f}\subset S$. Otherwise, $R_{f}-S$ is finite union of other $k$-rational semi-closed polyhedral cones. 
 
-6. Finally, the eighth entry $a_8$ of $D_i$ (i.e., $data[i][8]$) is a positive constant $c'$ such that satisfies the inclusion:
+6. Finally, the eighth entry $a_8$ of $D_i$ (i.e., $data[i][8]$) is a positive constant $c'$ such that satisfies the following inclusion:
 
    $$P^{\Delta,\Gamma}(c')\subset R_{f}=f(P^{\Delta,\Gamma}(c)),$$
    
