@@ -27,7 +27,7 @@ The file PCyclotomicc.txt contains a data of three vectors. It consists of one l
 
 ending in a semicolon (to prevent PARI GP from printing this big  file to screen). Each $D_i$ (i.e., $data[i]$ for $1\leq i\leq 3$) has the form  
 
-  $$[a_1,a_2,a_3,a_4,a_5,a_6,a7,a_8]$$
+  $$[a_1,a_2,a_3,a_4,a_5,a_6,a_7,a_8]$$
 
 1. The first entry $a_1$ (i.e., $data[1][1]$) has the form 
 
@@ -35,13 +35,13 @@ ending in a semicolon (to prevent PARI GP from printing this big  file to screen
 
 with 
 
-$p=$ quartic irreducible polynomial defining a totally complex number field  $k:= \text{the quotient ring } \mathbb{Q}[X]/(p)$, in our case $p$ is equal to $x^4+1$, $x^4-x^3+x^2-x+1$ or $x^4-x^2+1$.
+* $p=$ quartic irreducible polynomial defining a totally complex number field  $k:= \text{the quotient ring } \mathbb{Q}[X]/(p)$, in our case $p$ is equal to $x^4+1$, $x^4-x^3+x^2-x+1$ or $x^4-x^2+1$.
 
-$reg=$ Regulator of $k$ to 19 decimals,
+* $reg=$ Regulator of $k$ to 19 decimals,
 
-$disc=$ Discriminant of $k$,
+* $disc=$ Discriminant of $k$,
 
-$m=$ order of (full) torsion group of $k$ (here $m=8, 10, 12$).
+* $m=$ order of (full) torsion group of $k$ (here $m=8, 10, 12$).
 
 2. The second entry $a_2$ of $D_i$ (i.e., $data[i][2]$) has the form  
 
@@ -53,7 +53,7 @@ where $\tilde{e}_j$ (for $1\leq j\leq 4$) is an element of $k$ approximating the
  
    $$[C'_1,C'_2,...,C'_m],$$
  
-which represents a polyhedral complex of $m$ four-dimensional $k$-rational (semi-closed) cones:
+which represents a polyhedral complex of $m$ four-dimensional $k$-rational semi-closed cones:
  
  $$S:=\left(\bigcup_{j=0}^{m-1}C_j'\right)\cup [0],\quad C_j':=C_j-C_{j+1} \quad (\text{ taking } j \text{ modulo } m=8,10,12)$$
  
@@ -69,7 +69,7 @@ Since each cone $C_j'$ is simplicial, then each $C_j'$ has $\ell=4$ closed or op
 
 4. The fourth entry $a_4$ of $D_i$ (i.e., data[i][4]) has the form  
 
-      $$[CC_1,CC_2,...,CC_N]$$
+  $$[CC_1,CC_2,...,CC_N]$$
 
 where $CC_j$ is the closure in $\mathbb{R}^4$ of the cone $C_j'$ in $a_3$. Each closed cone $CC_j$ is given here by a list of generators in $k$.    
  
@@ -81,17 +81,17 @@ which represents a polyhedral complex of three 4-dimensional $k$-rational semi-c
 
   $$R_{f}=f(P^{\Delta,\Gamma}(c))=\bigcup_{i=1}^3Q_i,$$
 
-where $P^{\Delta,\Gamma}(c)$ is the polyhedral complex described in the Lemma 10 (page 158) of our article: [ATTRACTOR-REPELLER](https://www.sciencedirect.com/science/article/pii/S0022314X23002299)
+where $P^{\Delta,\Gamma}(c)$ is the polyhedral complex described in the Lemma 10 (page 158) of our article: [ATTRACTOR-REPELLER](https://www.sciencedirect.com/science/article/pii/S0022314X23002299) and the map $f$ is an $\varepsilon$-perturbation linear of identity described in Section 4.4 of this article (with $\varepsilon\leq 1/150$). Moreover to build such $R_f$ we consider the values: $(c,m)=(1/5,8), (1/6,10), (1/8,10)$ and we take
 
-and the map $f$ is an $\varepsilon$-perturbation linear of identity described in Section 4.4 of this article (with $\varepsilon\leq 1/150$). Moreover to build such $R_f$ we consider the values: $(c,m)=(1/5,8), (1/6,10), (1/8,10)$ and we take
 $$\Delta = \Gamma = \left[(1,0), (-1/2,\alpha), (-1/2,-\alpha)\right] \approx [1,\zeta_3,\zeta_3^2],\qquad \alpha:=\dfrac{2521}{2911}$$ 
-which represent a triangle with vertices in $\mathbb{Q}^2$ in the complex plane $\mathbb{C}$ such that their vertices are an approximation of the unit cubic roots, $\zeta_3=\text{exp}(2\pi i/3)$. 
 
-Each semi-closed cone $Q_i$ ($1\leq i\leq 3$) is given in the same form as in item 3, that is, each $Q_i$ is represented by (closed/open) half-spaces. 
+which represents a triangle with vertices in $\mathbb{Q}^2$ in the complex plane $\mathbb{C}$ such that their vertices are an approximation of the unit cubic roots, $\zeta_3=\text{exp}(2\pi i/3)$. 
+
+Each semi-closed cone $Q_i$ ($1\leq i\leq 3$) is given in the same form as in item 3, that is, each $Q_i$ is represented by intersection of closed or open half-spaces.
 
 6. The sixth entry  $a_6$ of $D_i$ (i.e., $data[i][6]$) has the form  
 
-      $$[QQ_1,QQ_2,QQ_3]$$
+  $$[QQ_1,QQ_2,QQ_3]$$
 
 where $QQ_j$ is the closure in $\mathbb{R}^4$ of the cone $Q_j$ in $a_5$. Each closed cone $QQ_j$ is given here by a list of generators in $k$.    
 
@@ -101,7 +101,7 @@ where $QQ_j$ is the closure in $\mathbb{R}^4$ of the cone $Q_j$ in $a_5$. Each c
 
 If $R_{f}-S=[\quad]$, then $R_{f}\subset S$. Otherwise, $R_{f}-S$ is finite union of other $k$-rational semi-closed polyhedral cones. 
 
-6. Finally, the eighth entry $a_8$ of $D_i$ (i.e., $data[i][8]$) is a positive constant $c'$ such that satisfies 
+6. Finally, the eighth entry $a_8$ of $D_i$ (i.e., $data[i][8]$) is a positive constant $c'$ such that satisfies the inclusion:
 
    $$P^{\Delta,\Gamma}(c')\subset R_{f}=f(P^{\Delta,\Gamma}(c)),$$
    
