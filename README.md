@@ -57,7 +57,7 @@ with
 
       $$[C_1,C_2,...,C_N]$$
 
-which is a list of the $N$ (semi-closed) cones where $N = F[1][9]$ was described above and the union of such cones form a Shintani domain for the action on $(\mathbb{C}^{\ast})\times(\mathbb{C}^{\ast})$ of the group $G=T\times\langle{E\rangle}$, with $T$ subgroup of the torsion group whose generators is $b_2=F[1][5][2][2]\in k$ which is of order $a_2=F[1][5][2][1]$. Each cone $C_j$ is given by $\ell$ linear inequalities ($\ell$ depending on the cone) giving $\ell$ closed or open half-spaces whose intersection is $Cj$. Thus, each $C_j$ has the form  
+which is a list of the $N$ (semi-closed) cones where $N = F[1][9]$ was described above and the union of such cones form a Shintani domain for the action on $(\mathbb{C}^{\ast})\times(\mathbb{C}^{\ast})$ of the group $G=T\times\langle{E\rangle}$, with $T$ subgroup of the torsion group whose generators is $b_2=F[1][5][2][2]\in k$ which is of order $a_2=F[1][5][2][1]$. Each cone $C_j$ is given by $\ell$ linear inequalities ($\ell$ depending on the cone) giving $\ell$ closed or open half-spaces whose intersection is $C_j$. Thus, each $C_j$ has the form  
 
   $$[v_1,v_2,...,v_{\ell}]$$
 
