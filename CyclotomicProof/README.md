@@ -31,7 +31,7 @@ ending in a semicolon (to prevent PARI GP from printing this big  file to screen
 
 1. The first entry $a_1$ (i.e., $data[1][1]$) has the form 
 
-   $$[p,reg,disc,m]$$
+  $$[p,reg,disc,m]$$
 
 with 
 
@@ -97,13 +97,13 @@ where $QQ_j$ is the closure in $\mathbb{R}^4$ of the cone $Q_j$ in $a_5$. Each c
 
 5. The seventh entry $a_7$ of $D_i$ (i.e., $data[i][7]$) represents the difference set:
 
-   $$R_{f}-S$$
+ $$R_{f}-S$$
 
 If $R_{f}-S=[\quad]$, then $R_{f}\subset S$. Otherwise, $R_{f}-S$ is finite union of other $k$-rational semi-closed polyhedral cones. 
 
 6. Finally, the eighth entry $a_8$ of $D_i$ (i.e., $data[i][8]$) is a positive constant $c'$ such that satisfies the following inclusion:
 
-   $$P^{\Delta,\Gamma}(c')\subset R_{f}=f(P^{\Delta,\Gamma}(c)),$$
+ $$P^{\Delta,\Gamma}(c')\subset R_{f}=f(P^{\Delta,\Gamma}(c)),$$
    
 which  it is proved in Lemma 15 of our paper [ATTRACTOR-REPELLER](https://www.sciencedirect.com/science/article/pii/S0022314X23002299).   
    
