@@ -41,6 +41,7 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
 |        8 |          $\theta^2+\theta+1$ |
 |         10     |     $-\theta+1$  |
 |     12     |    $-\theta^3-\theta^2$ |
+|a|b|
 
 
 
