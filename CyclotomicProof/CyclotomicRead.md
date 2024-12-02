@@ -13,17 +13,19 @@ Assuming that the generator $w\in k$ of the torsion group $W=\langle{w}\rangle$ 
 
 $$w=(\zeta_m^{\ell},\zeta_m),\quad \text{ where } \ell=3 \text{ if } m=8,10, \text{ and } \ell=5 \text{ if } m=12.$$
 
-**Here we computationally verify the following claims:**
+**Here we computationally verify the following:**
 
-I)  $P^{\Delta,\Delta}(c')\subset S\subset P^{\Delta,\Delta}(d'),$ for certain constants $c'>0$ and $d'>0$.
+<u>Claim I.</u>  $P^{\Delta,\Delta}(c')\subset S\subset P^{\Delta,\Delta}(d'),$ for certain constants $c'>0$ and $d'>0$.
 
-II)    $E_0\cdot S\subset S$
+<u>Claim II. </u>  $E_0\cdot S\subset S$
 
 _where_ 
 
 - $\Delta$ is an a triangle whose vertices are one approximation of cubic roots of unity,
 
-$$\Delta = \Big[(1,0), \left(-\dfrac{1}{2},\alpha\right), \left(-\dfrac{1}{2},-\alpha\right)\Big] \approx \Big[1,\zeta_3,\zeta_3^2\Big],\qquad \alpha:=\dfrac{2521}{2911}$$
+  $$
+  \Delta = \Big[(1,0), \left(-\dfrac{1}{2},\alpha\right), \left(-\dfrac{1}{2},-\alpha\right)\Big] \approx \Big[1,\zeta_3,\zeta_3^2\Big],\qquad \alpha:=\dfrac{2521}{2911}.
+  $$
 
 - $P^{\Delta,\Delta}(\lambda)$ denotes the complex of polyhedral cones defined in our previous paper
   [Attractor\-Repeller](https://www.sciencedirect.com/science/article/pii/S0022314X23002299)
