@@ -1,5 +1,5 @@
 
-### Cyclotomic Quartic Fields
+## Cyclotomic Quartic Fields
 
 
 Let $k=\mathbb{Q}(\zeta_m)$
