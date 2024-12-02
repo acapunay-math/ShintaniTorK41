@@ -1,6 +1,8 @@
 ## A k-rational complex of cones for three cyclotomic number fields  
 
-Let $k=\mathbb{Q}(\zeta_m)$ be one of the three cyclotomic quartic fields, where $\zeta_m=\mathrm{e}^{2\pi i/m}$ for $m=8, 10,$ or $12$. The minimal polynomial which defines $k=\mathbb{Q}(\theta)$ satisfy
+
+Let $k=\mathbb{Q}(\zeta_m)$
+ be one of the three cyclotomic quartic fields, where $\zeta_m=\mathrm{e}^{2\pi i/m}$ for $m=8, 10,$ or $12$. The minimal polynomial which defines $k=\mathbb{Q}(\theta)$ satisfy
 
 $$\theta^4+1=0, \text{ for } m=8,$$
 $$\theta^4-\theta^3+\theta^2-\theta+1=0, \text{ for } m=10,$$
