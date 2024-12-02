@@ -10,9 +10,9 @@ $$\theta^4-\theta^2+1=0, \text{ for } m=12.$$
 
 Here we computationally verify the following claims:
 
-  1) $$P^{\Delta,\Delta}(c')\subset S\subset P^{\Delta,\Delta}(d')$$
+  I) \; $$P^{\Delta,\Delta}(c')\subset S\subset P^{\Delta,\Delta}(d')$$
 
-  2) $$E\cdot S\subset S$$
+  II) \; $$E\cdot S\subset S$$
 
 where 
 
