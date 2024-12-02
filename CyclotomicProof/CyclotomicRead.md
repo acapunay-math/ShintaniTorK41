@@ -15,9 +15,9 @@ $$w=(\zeta_m^{\ell},\zeta_m),\quad \text{ where } \ell=3 \text{ if } m=8,10, \te
 
 **Here we computationally verify the following:**
 
-<u>Claim I.</u>  $P^{\Delta,\Delta}(c')\subset S\subset P^{\Delta,\Delta}(d'),$ for certain constants $c'>0$ and $d'>0$.
+<ins>Claim I.</ins>  $P^{\Delta,\Delta}(c')\subset S\subset P^{\Delta,\Delta}(d'),$ for certain constants $c'>0$ and $d'>0$.
 
-<u>Claim II.</u>  $E_0\cdot S\subset S$
+<ins>Claim II.</ins>  $E_0\cdot S\subset S$
 
 _where_ 
 
