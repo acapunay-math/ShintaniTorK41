@@ -24,8 +24,7 @@ _where_
 - $\Delta$ is an a triangle whose vertices are one approximation of cubic roots of unity,
 
   $$
-  \Delta = \Big[(1,0), \left(-\dfrac{1}{2},\alpha\right), \left(-\dfrac{1}{2},-\alpha\right)\Big] \approx \Big[1,\zeta_3,\zeta_3^2\Big],\qquad \alpha:=\dfrac{2521}{2911}.
-  $$
+  \Delta = \Big[(1,0), \left(-\dfrac{1}{2},\alpha\right), \left(-\dfrac{1}{2},-\alpha\right)\Big] \approx \Big[1,\zeta_3,\zeta_3^2\Big],\qquad \alpha:=\dfrac{2521}{2911}.$$
 
 - $P^{\Delta,\Delta}(\lambda)$ denotes the complex of polyhedral cones defined in our previous paper
   [Attractor\-Repeller](https://www.sciencedirect.com/science/article/pii/S0022314X23002299)
