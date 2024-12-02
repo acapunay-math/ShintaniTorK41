@@ -8,9 +8,11 @@ $$\theta^4-\theta^2+1=0, \text{ for } m=12.$$
 
 Here we computationally verify the following claims:
 
-  1) $$P^{\Lambda,\Lambda}(c')\subset S\subset P^{\Lambda,\Lambda}(d')$$
+  1) $$P^{\Delta,\Delta}(c')\subset S\subset P^{\Delta,\Delta}(d')$$
 
-  2)
+  2) $$E\cdot S\subset S$$
+
+where 
 
    Here we show two complex of $k$-rational polyhedral cones, called $S$ and $R_{f}$, for three specific number fields, then we verify algorithmically that $S$ contains $R_{f}$. For this we verify that the difference set $R_{f}-S$ is empty, since this is made on the rational field $\mathbb{Q}$, then this computation is rigorous and exact. 
   
