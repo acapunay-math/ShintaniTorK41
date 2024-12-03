@@ -70,14 +70,16 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
       Rm=ApproxRComplex(bnf,d,3,3);
   
   We can obtain two complexes of $k$-rational polyhedral cones
-  $$A_m:=f(P^{\Delta,\Delta}(c)),\quad R_m=f(P^{\Delta,\Delta}(d)).$$
-  For this, we should use the following parameters $(c,d)$:
   
-  | $p$  | $c$  | $d$ |
-  | :------------ |:---------------:| -------------:|
-  | $x^4+1$      | $1/5$ |    $5$ |
-  | $x^4-x^3+x^2-x+1$|    $1/6$ |  $4$ |
-  | $x^4-x^2+1$ |    $1/8$  |      $2$ |
+     $$A_m:=f(P^{\Delta,\Delta}(c)),\quad R_m=f(P^{\Delta,\Delta}(d))$$
+  
+  For this, we should use the following parameters $(m,c,d)$:
+  
+  | $p$ | $m$ | $c$  | $d$ |
+  | :------------ | :------------ |:---------------:| -------------:|
+  | $x^4+1$  | $8$     | $1/5$ |    $5$ |
+  | $x^4-x^3+x^2-x+1$ | $10$ |  $1/6$ |  $4$ |
+  | $x^4-x^2+1$ | $12$ |  $1/8$  |      $2$ |
   
   <u>Step 2:</u>
   <u>Step 3:</u>
