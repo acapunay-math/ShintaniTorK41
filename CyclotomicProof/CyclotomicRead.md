@@ -86,6 +86,7 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
   $$A_m-S,\qquad S-R_m$$
   
   Since we obtain that such differences-set are both empty, then we have that
+
   $$A_m\subset S \subset R_m.$$
   
   <u>Step 3:</u> Using the command ?? we can explicitly obtain positive constants $c'>0$ and $d'>0$ such that
