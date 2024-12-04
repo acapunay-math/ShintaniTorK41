@@ -56,24 +56,24 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
 
 ## Proof of the two Lemmas:
 
-- _**Proof of Lemma I.**_ In the algebraic software PARI/GP
+- _**Proof of Lemma I.**_ Open the algebraic software PARI/GP and loading the file ?? using the command
 
   <u>Step 0:</u> Fixing one of three cyclotomic quartic fields $k=\mathbb{Q}(\zeta_m)$ for $m=8, 10$, and $12$. Execute on PARI/GP the classical command
   
       bnf=bnfinit(p);
   
-  taking as input $p=x^4+1$, $x^4-x^3+x^2-x+1$, or $x^4-x^2+1$
+  taking as input $p=x^4+1$, $x^4-x^3+x^2-x+1$, $x^4-x^2+1$.
   
-  <u>Step 1:</u> After load the file ??, apply the command 
+  <u>Step 1:</u> In PARI/GP apply the command 
   
       Am=ApproxRComplex(bnf,c,3,3);
       Rm=ApproxRComplex(bnf,d,3,3);
   
   We can obtain two complexes of $k$-rational polyhedral cones
   
-     $$A_m:=f(P^{\Delta,\Delta}(c)),\quad R_m=f(P^{\Delta,\Delta}(d))$$
+     $$A_m:=f(P^{\Delta,\Delta}(c)),\quad R_m:=f(P^{\Delta,\Delta}(d))$$
   
-  For this, we should use the following parameters $(m,c,d)$:
+  For this, we consider the following parameters $(m,c,d)$:
   
   | $p$ | $m$ | $c$  | $d$ |
   | :------------ | :------------ |:---------------:| -------------:|
@@ -81,8 +81,29 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
   | $x^4-x^3+x^2-x+1$ | $10$ |  $1/6$ |  $4$ |
   | $x^4-x^2+1$ | $12$ |  $1/8$  |      $2$ |
   
-  <u>Step 2:</u>
-  <u>Step 3:</u>
+  <u>Step 2:</u> Using the command ?? to obtain the differences-set
+  
+  $$A_m-S,\qquad S-R_m$$
+  
+  Since we obtain that such differences-set are both empty, then we have that
+  $$A_m\subset S \subset R_m.$$
+  
+  <u>Step 3:</u> Using the command ?? we can explicitly obtain positive constants $c'>0$ and $d'>0$ such that
+  
+  $$P^{\Delta,\Delta}(c')\subset A_m=f(P^{\Delta,\Delta}(c'))$$
+  
+  and
+  
+  $$R_m=f(P^{\Delta,\Delta}(d))\subset P^{\Delta,\Delta}(d')$$
+  
+  For this, we use the parameters $(c',d')$
+  
+  |  $m$ | $c'$  | $d'$ |
+  | :------------ |:---------------:| -------------:|
+  | $8$     | ? |  ?   |
+  | $10$ | ?  | ? |
+  | $12$ | ?  | ?   |
+  
 
 - _**Proof of Lemma II:**_
 
