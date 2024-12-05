@@ -1,6 +1,6 @@
 # Cyclotomic Proof
 
-- Alex Capuñay, Facultad de Ciencias, Universidad Arturo Prat, Iquique - Chile.
+- Alex Capuñay, Facultad de Ciencias, Universidad Arturo Prat. Iquique - Chile.
 - Milton Espinoza, Departamento de Matemáticas, Facultad de Ciencias, Universidad de La Serena. La Serena - Chile.
 - Eduardo Friedman, Departamento de Matemáticas, Facultad de Ciencias, Universidad de Chile. Santiago - Chile.
 
@@ -37,10 +37,15 @@ _where_
 
 $$\Delta = \Big[(1,0), \left(-\dfrac{1}{2},\alpha\right), \left(-\dfrac{1}{2},-\alpha\right)\Big] \approx \Big[1,\zeta_3,\zeta_3^2\Big],\qquad \alpha:=\dfrac{2521}{2911}$$
 
-- $P^{\Delta,\Delta}(\lambda)$ denotes the complex of polyhedral cones defined in our previous paper
+- $P^{\Delta,\Delta}(\lambda)$ denotes the complex of three polyhedral four\-dimensional cones defined in our previous paper
   [Attractor\-Repeller](https://www.sciencedirect.com/science/article/pii/S0022314X23002299),
 
-$$P^{\Delta,\Delta}(\lambda)=\bigcup_{i=1}^3\mathbb{R}_{\geq0}\cdot (\Delta\times (\lambda^{-1}\partial\Delta)),\qquad \lambda>0.$$ 
+$$
+P^{\Delta,\Delta}(\lambda)=\mathbb{R}_{\geq0}\cdot (\Delta\times (\lambda^{-1}\partial\Delta))=\bigcup_{i=0}^{2}\mathbb{R}_{\geq0}\cdot Q_i,\qquad \lambda>0,
+$$
+
+with $Q_i=\Delta\times[c^{-1}\Delta_{i},c^{-1}\Delta_{i+1}]$ (take $i$ module 3), $\Delta=[\Delta_0,\Delta_1,\Delta_2]$.
+
 
 - $S$ denotes the complex of polyhedral cones with coefficients in the field $k$,
 
@@ -56,55 +61,86 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
 
 ## Proof of the two Lemmas:
 
-- _**Proof of Lemma I.**_ Open the algebraic software PARI/GP and loading the file ?? using the command
+- _**Proof of Lemma I.**_ Open the computational algebraic system PARI/GP and loading our the file YY? using the command
+  ```
+  \r NameFile.gp
+  ```
 
-  <u>Step 0:</u> Fixing one of three cyclotomic quartic fields $k=\mathbb{Q}(\zeta_m)$ for $m=8, 10$, and $12$. Execute on PARI/GP the classical command
-  
-      bnf=bnfinit(p);
-  
-  taking as input $p=x^4+1$, $x^4-x^3+x^2-x+1$, $x^4-x^2+1$.
-  
-  <u>Step 1:</u> In PARI/GP apply the command 
-  
-      Am=ApproxRComplex(bnf,c,3,3);
-      Rm=ApproxRComplex(bnf,d,3,3);
-  
-  We can obtain two complexes of $k$-rational polyhedral cones
-  
-     $$A_m:=f(P^{\Delta,\Delta}(c)),\quad R_m:=f(P^{\Delta,\Delta}(d))$$
-  
-  For this, we consider the following parameters $(m,c,d)$:
-  
-  | $p$ | $m$ | $c$  | $d$ |
-  | :------------ | :------------ |:---------------:| -------------:|
-  | $x^4+1$  | $8$     | $1/5$ |    $5$ |
-  | $x^4-x^3+x^2-x+1$ | $10$ |  $1/6$ |  $4$ |
-  | $x^4-x^2+1$ | $12$ |  $1/8$  |      $2$ |
-  
-  <u>Step 2:</u> Using the command ?? to obtain the differences-set
-  
-  $$A_m-S,\qquad S-R_m$$
-  
-  Since we obtain that such differences-set are both empty, then we have that
+  Then fixing one of three cyclotomic quartic fields $k=\mathbb{Q}(\zeta_m)$ for $m=8, 10$, or $12$. For this, we execute on PARI/GP the classical command
+  ```
+  bnf=bnfinit(p);
+  ```
 
-  $$A_m\subset S \subset R_m.$$
+  where we taking as input $p=x^4+1$, $x^4-x^3+x^2-x+1$, $x^4-x^2+1$.
   
-  <u>Step 3:</u> Using the command ?? we can explicitly obtain positive constants $c'>0$ and $d'>0$ such that
+  <u>**Step 1:**</u>  Since the cones in $P^{\Delta,\Delta}(\lambda)$ do not necessarily have their generators in $k$,  we need below to consider $f$, to be linear map which it is little perturbation of identity map, and as $k$ is dense in $\mathbb{R}^4$, we can always obtain one new polyhedral complex $f(P^{\Delta,\Delta}(\lambda))$ from $P^{\Delta,\Delta}(\lambda)$, now with generators in $k$. For this, we apply the command 
+  ```
+  [A,R]=ApproxRComplex(bnf,c,d);
+  ```
+
+  Considering the following parameters $(c,d)$ according to each $p$ taken:
+  | $p$ |  $c$ | $d$ |
+  | :---------------- | :---: | --: |
+  | $x^4+1$ | $1/5$ | $5$ |
+  | $x^4-x^3+x^2-x+1$ | $1/6$ | $4$ |
+  | $x^4-x^2+1$ | $1/8$ | $2$ |
+
+  So we can obtain two complexes of three $k$\-rational four\-dimensional polyhedral cones each one
+
+  $$
+  A:=f(P^{\Delta,\Delta}(c)),\quad R:=f(P^{\Delta,\Delta}(d)).
+  $$
+
+  <u>**Step 2:**</u> Now apply the command in the pair (A,R) of the previous Step
+  ```
+  [D1,D2]=DiffComplex(bnf,A,R);
+  ```
+
+  to obtain the difference\-sets
+
+  $$
+  D_1:=A-S,\qquad D_2:=S-R
+  $$
+
+  Since we obtain that such difference\-sets are both empty, then this implies that
+
+  $$
+  A\subset S \subset R.
+  $$
   
-  $$P^{\Delta,\Delta}(c')\subset A_m=f(P^{\Delta,\Delta}(c'))$$
+  That is,
   
-  and
+  $$f(P^{\Delta,\Delta}(c))\subset S\subset f(P^{\Delta,\Delta}(d)).$$
+
+  N.B. We note that here cannot apply the command DiffComplex(--) directly on the complexes  $P^{\Delta,\Delta}(c)$ and $P^{\Delta,\Delta}(d)$, because such complexes are not $k$-rational, that is, their generators are not elements of number field $k$. 
   
-  $$R_m=f(P^{\Delta,\Delta}(d))\subset P^{\Delta,\Delta}(d')$$
+  <u>**Step 3:**</u> Finally, using the command 
+  ```
+  [c',d']=Bounds([c,d]);
+  ```
+
+  we can explicitly obtain positive constants $c'>0$ and $d'>0$ to ensure that
+
+  $$
+  P^{\Delta,\Delta}(c')\subset f(P^{\Delta,\Delta}(c)),\qquad 
+  f(P^{\Delta,\Delta}(d))\subset P^{\Delta,\Delta}(d').
+  $$
+
+  In this case our algorithm returns the following parameters $(c',d')$ according to each $(c,d)$ previously established:
   
-  For this, we use the parameters $(c',d')$
-  
-  |  $m$ | $c'$  | $d'$ |
-  | :------------ |:---------------:| -------------:|
-  | $8$     | ? |  ?   |
-  | $10$ | ?  | ? |
-  | $12$ | ?  | ?   |
-  
+  | $c$ | $d$ | $c'$ | $d'$ |
+  | :--- | :---  | :--: | ---: |
+  | $1/5$ | $5$ |   $\dfrac{1814222527}{11043058985}\approx 0.164$ |    $\dfrac{151154723}{24972421}\approx 6.052$ |
+  | $1/6$ | $4$ |   $\dfrac{3518892479}{26481431049}\approx 0.132$ |    $\dfrac{242139697}{51405543}\approx 4.710$ |
+  | $1/8$ | $2$ |   $\dfrac{3299787329}{35272057207}\approx 0.093$ |    $\dfrac{121800199}{54326945}\approx 2.241$ |
+
+  So, by Steps 2 and 3, we have
+
+  $$
+  P^{\Delta,\Delta}(c')\subset S\subset P^{\Delta,\Delta}(d').
+  $$
+
+  Completing the Proof.
 
 - _**Proof of Lemma II:**_
 
