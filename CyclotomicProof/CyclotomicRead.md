@@ -21,7 +21,7 @@ $$\theta^4-\theta^3+\theta^2-\theta+1=0, \text{ for } m=10,$$
 
 $$\theta^4-\theta^2+1=0, \text{ for } m=12.$$
 
-Let the torsion group $W:=\langle{w}\rangle$ of $k$, note that $w=\theta^{t}$ for any $t\in\N$ with $gcd(t,m)=1$. Let us assume that such a generator $w$ of $W$ is embedded $\mathbb{C}\times\mathbb{C}$ as 
+Let the torsion group $W:=\langle{w}\rangle$ of $k$, note that $w=\theta^{t}$ for any $t\in\mathbb{N}$ with $gcd(t,m)=1$. Let us assume that such a generator $w$ of $W$ is embedded $\mathbb{C}\times\mathbb{C}$ as 
 
 $$w=(\zeta_m^{\ell},\zeta_m),\quad \text{ where } \ell=3 \text{ if } m=8,10, \text{ and } \ell=5 \text{ if } m=12.$$
 
@@ -40,9 +40,7 @@ $$\Delta = \Big[(1,0), \left(-\dfrac{1}{2},\alpha\right), \left(-\dfrac{1}{2},-\
 - $P^{\Delta,\Delta}(\lambda)$ denotes the complex of three polyhedral four\-dimensional cones defined in our previous paper
   [Attractor\-Repeller](https://www.sciencedirect.com/science/article/pii/S0022314X23002299),
 
-$$
-P^{\Delta,\Delta}(\lambda)=\mathbb{R}_{\geq0}\cdot (\Delta\times (\lambda^{-1}\partial\Delta))=\bigcup_{i=0}^{2}\mathbb{R}_{\geq0}\cdot Q_i,\qquad \lambda>0,
-$$
+$$P^{\Delta,\Delta}(\lambda)=\mathbb{R}_{\geq0}\cdot (\Delta\times (\lambda^{-1}\partial\Delta))=\bigcup_{i=0}^{2}\mathbb{R}_{\geq0}\cdot Q_i,\qquad \lambda>0,$$
 
 with $Q_i=\Delta\times[c^{-1}\Delta_{i},c^{-1}\Delta_{i+1}]$ (take $i$ module 3), $\Delta=[\Delta_0,\Delta_1,\Delta_2]$.
 
@@ -86,9 +84,7 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
 
   So we can obtain two complexes of three $k$\-rational four\-dimensional polyhedral cones each one
 
-  $$
-  A:=f(P^{\Delta,\Delta}(c)),\quad R:=f(P^{\Delta,\Delta}(d)).
-  $$
+  $$A:=f(P^{\Delta,\Delta}(c)),\quad R:=f(P^{\Delta,\Delta}(d)).$$
 
   <u>**Step 2:**</u> Now apply the command in the pair (A,R) of the previous step
   ```
@@ -97,15 +93,11 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
 
   to obtain the difference\-sets
 
-  $$
-  D_1:=A-S,\qquad D_2:=S-R
-  $$
+  $$D_1:=A-S,\qquad D_2:=S-R$$
 
   Since we obtain that such difference\-sets are both empty, then this implies that
 
-  $$
-  A\subset S \subset R.
-  $$
+  $$A\subset S \subset R.$$
   
   That is,
   
@@ -120,10 +112,8 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
 
   By Lemma 15 in our paper [Attractor\-Repeller](https://www.sciencedirect.com/science/article/pii/S0022314X23002299), we can explicitly obtain positive constants $c'>0$ and $d'>0$ to ensure that
 
-  $$
-  P^{\Delta,\Delta}(c')\subset f(P^{\Delta,\Delta}(c)),\qquad 
-  f(P^{\Delta,\Delta}(d))\subset P^{\Delta,\Delta}(d').
-  $$
+  $$P^{\Delta,\Delta}(c')\subset f(P^{\Delta,\Delta}(c)),\qquad 
+  f(P^{\Delta,\Delta}(d))\subset P^{\Delta,\Delta}(d').$$
 
   In this case our algorithm returns the following parameters $(c',d')$ according to each $(c,d)$ and $\varepsilon=1/150$: 
   
@@ -135,9 +125,7 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
 
   So, by Steps 2 and 3, we have
 
-  $$
-  P^{\Delta,\Delta}(c')\subset S\subset P^{\Delta,\Delta}(d').
-  $$
+  $$P^{\Delta,\Delta}(c')\subset S\subset P^{\Delta,\Delta}(d').$$
 
   Completing the Proof of Lemma I.
 
