@@ -1,10 +1,10 @@
 ## A k-rational complex of cones for three cyclotomic number fields  
 
-  Here we show the three complexes of $k$-rational four-dimensional polyhedral cones, denotes by $S$, $A$ and $R$, for each one of the cyclotomic quartic number fields $k=\mathbb{Q}(\zeta^{2\Pi i/m})$, $m=8, 10, 12$, whose minimal polinomial $p$ is
+  Here we show the three complexes of $k$-rational four-dimensional polyhedral cones, denotes by $S$, $A$ and $R$, for each one of the cyclotomic quartic number fields $k=\mathbb{Q}(\mathrm{e}^{2\Pi i/m})$, $m=8, 10, 12$, whose minimal polinomial $p$ is
   
-   $$p:=x^4+1,\quad x^4-x^3+x^2-x+1,\quad x^4-x^2+1.$$
+   $$p:=x^4+1,\quad x^4-x^3+x^2-x+1,\quad x^4-x^2+1,$$
   
-  Then we verify algorithmically that $S$ contains $R_{f}$. 
+  respectively. Then we verify algorithmically that $S$ contains $R_{f}$. 
   
   For this we verify that the difference set $R_{f}-S$ is empty, since this is made on the rational field $\mathbb{Q}$, then this computation is rigorous and exact. 
   
