@@ -113,7 +113,8 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
   By Lemma 15 in our paper [Attractor\-Repeller](https://www.sciencedirect.com/science/article/pii/S0022314X23002299), we can explicitly obtain positive constants $c'>0$ and $d'>0$ to ensure that
 
  $$P^{\Delta,\Delta}(c')\subset f(P^{\Delta,\Delta}(c)),\qquad f(P^{\Delta,\Delta}(d))\subset P^{\Delta,\Delta}(d').$$
- In this case our algorithm returns the following parameters $(c',d')$ according to each $(c,d)$ and $\varepsilon=1/150$: 
+
+  In this case our algorithm returns the following parameters $(c',d')$ according to each $(c,d)$ and $\varepsilon=1/150$: 
   
   | $c$ | $d$ | $c'$ | $d'$ |
   | :--- | :---  | :--: | ---: |
