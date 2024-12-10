@@ -8,7 +8,7 @@ This note was created using Markdown in CoCalc.
 
 **Release notes:**
 
-- Version 1.0 (03 December 2024). Initial version.
+- Version 1.0 \(06 December 2024\). Initial version.
 
 ## Two lemmas:
 
@@ -21,7 +21,7 @@ $$\theta^4-\theta^3+\theta^2-\theta+1=0, \text{ for } m=10,$$
 
 $$\theta^4-\theta^2+1=0, \text{ for } m=12.$$
 
-Assuming that the generator $w\in k$ of the torsion group $W=\langle{w}\rangle$ of field $k$ is embedded in $\mathbb{C}\times\mathbb{C}$ as 
+Let the torsion group $W:=\langle{w}\rangle$ of $k$, note that $w=\theta^{t}$ for any $t\in\N$ with $gcd(t,m)=1$. Let us assume that such a generator $w$ of $W$ is embedded $\mathbb{C}\times\mathbb{C}$ as 
 
 $$w=(\zeta_m^{\ell},\zeta_m),\quad \text{ where } \ell=3 \text{ if } m=8,10, \text{ and } \ell=5 \text{ if } m=12.$$
 
@@ -29,7 +29,7 @@ $$w=(\zeta_m^{\ell},\zeta_m),\quad \text{ where } \ell=3 \text{ if } m=8,10, \te
 
 <u>Lemma I.</u>  There are $c'>0$ and $d'>0$ such that $P^{\Delta,\Delta}(c')\subset S\subset P^{\Delta,\Delta}(d')$.
 
-<u>Lemma II.</u>  $\widetilde{E}\cdot S\subset S$.
+<u>Lemma II.</u>  $u\cdot S\subset S$.
 
 _where_ 
 
@@ -46,14 +46,13 @@ $$
 
 with $Q_i=\Delta\times[c^{-1}\Delta_{i},c^{-1}\Delta_{i+1}]$ (take $i$ module 3), $\Delta=[\Delta_0,\Delta_1,\Delta_2]$.
 
-
 - $S$ denotes the complex of polyhedral cones with coefficients in the field $k$,
 
 $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdot\text{Cone}[1,w,w^2,w^3].$$
 
-- $\widetilde{E}=(\widetilde{E}_1,\widetilde{E}_2)\in\mathbb{C}\times\mathbb{C}$ denotes the following fundamental units of $k$ such that $|\widetilde{E}_1|<1$,
+- $u=(u_1,u_2)\in\mathbb{C}\times\mathbb{C}$ denotes the following fundamental units of $k$ such that $|u_1|<1$,
 
-|   $m$  | $\widetilde{E}$ |
+|   $m$  | $u$ |
 |:---------------:| -------------:|
 |        8 |          $\theta^2+\theta+1$ |
 |         10     |     $-\theta+1$  |      
@@ -61,7 +60,7 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
 
 ## Proof of the two Lemmas:
 
-- _**Proof of Lemma I.**_ Open the computational algebraic system PARI/GP and loading our the file YY? using the command
+- _**Proof of Lemma I.**_ Open the computational algebraic system PARI/GP and loading our the file [NameFile.gp](??) using the command
   ```
   \r NameFile.gp
   ```
@@ -73,7 +72,7 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
 
   where we taking as input $p=x^4+1$, $x^4-x^3+x^2-x+1$, $x^4-x^2+1$.
   
-  <u>**Step 1:**</u>  Since the cones in $P^{\Delta,\Delta}(\lambda)$ do not necessarily have their generators in $k$,  we need below to consider $f$, to be linear map which it is little perturbation of identity map, and as $k$ is dense in $\mathbb{R}^4$, we can always obtain one new polyhedral complex $f(P^{\Delta,\Delta}(\lambda))$ from $P^{\Delta,\Delta}(\lambda)$, now with generators in $k$. For this, we apply the command 
+  <u>**Step 1:**</u>  Since the cones in $P^{\Delta,\Delta}(\lambda)$ do not necessarily have their generators in $k$,  we need below to consider $f$, to be linear map which it is little perturbation of identity map, called $\varepsilon$-perturbation of identity, and as $k$ is dense in $\mathbb{R}^4$, we can always obtain one new polyhedral complex $f(P^{\Delta,\Delta}(\lambda))$ from $P^{\Delta,\Delta}(\lambda)$, now with generators in $k$. For this, we apply the command 
   ```
   [A,R]=ApproxRComplex(bnf,c,d);
   ```
@@ -91,9 +90,9 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
   A:=f(P^{\Delta,\Delta}(c)),\quad R:=f(P^{\Delta,\Delta}(d)).
   $$
 
-  <u>**Step 2:**</u> Now apply the command in the pair (A,R) of the previous Step
+  <u>**Step 2:**</u> Now apply the command in the pair (A,R) of the previous step
   ```
-  [D1,D2]=DiffComplex(bnf,A,R);
+  [D1,D2]=DiffComplex1(bnf,A,R);
   ```
 
   to obtain the difference\-sets
@@ -112,21 +111,21 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
   
   $$f(P^{\Delta,\Delta}(c))\subset S\subset f(P^{\Delta,\Delta}(d)).$$
 
-  N.B. We note that here cannot apply the command DiffComplex(--) directly on the complexes  $P^{\Delta,\Delta}(c)$ and $P^{\Delta,\Delta}(d)$, because such complexes are not $k$-rational, that is, their generators are not elements of number field $k$. 
+  N.B. We note that here cannot apply the command DiffComplex1(--) directly on the complexes  $P^{\Delta,\Delta}(c)$ and $P^{\Delta,\Delta}(d)$, because such complexes are not $k$-rational, that is, their generators are not elements of number field $k$. 
   
   <u>**Step 3:**</u> Finally, using the command 
   ```
   [c',d']=Bounds([c,d]);
   ```
 
-  we can explicitly obtain positive constants $c'>0$ and $d'>0$ to ensure that
+  By Lemma 15 in our paper [Attractor\-Repeller](https://www.sciencedirect.com/science/article/pii/S0022314X23002299), we can explicitly obtain positive constants $c'>0$ and $d'>0$ to ensure that
 
   $$
   P^{\Delta,\Delta}(c')\subset f(P^{\Delta,\Delta}(c)),\qquad 
   f(P^{\Delta,\Delta}(d))\subset P^{\Delta,\Delta}(d').
   $$
 
-  In this case our algorithm returns the following parameters $(c',d')$ according to each $(c,d)$ previously established:
+  In this case our algorithm returns the following parameters $(c',d')$ according to each $(c,d)$ and $\varepsilon=1/150$: 
   
   | $c$ | $d$ | $c'$ | $d'$ |
   | :--- | :---  | :--: | ---: |
@@ -140,7 +139,13 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
   P^{\Delta,\Delta}(c')\subset S\subset P^{\Delta,\Delta}(d').
   $$
 
-  Completing the Proof.
+  Completing the Proof of Lemma I.
 
-- _**Proof of Lemma II:**_
+- _**Proof of Lemma II:**_ Using the fundamental units $u$ given above for each $m=8,10,12$, we can verify that $$u\cdot S\subset S.$$
+
+   For this, we apply the following command
+   
+      D=DiffComplex2(bnf,u);
+      
+  which compute the difference $u\cdot S-S$ of these complexes. In the three cases ($m=8,10,$ and $12$), our implementation return empty-set. That is, the (polyhedral) complex $u\cdot S$ is contained in the complex $S$. Completing the Proof of Lemma II.
 
