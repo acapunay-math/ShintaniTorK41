@@ -19,7 +19,7 @@ $$w=(\zeta_m^{\ell},\zeta_m),\quad \text{ where } \ell=3 \text{ if } m=8,10, \te
 
  **Here we computationally verify the following claims:**
 
-<u>Lemma I.</u>  There are $c'>0$ and $d'>0$ such that $P^{\Delta,\Delta}(c')\subset S\subset P^{\Delta,\Delta}(d')$.
+<ins>Lemma I.</ins>  There are $c'>0$ and $d'>0$ such that $P^{\Delta,\Delta}(c')\subset S\subset P^{\Delta,\Delta}(d')$.
 
 <u>Lemma II.</u>  $u\cdot S\subset S$.
 
