@@ -33,7 +33,7 @@ $$\Delta = \Big[(1,0), \left(-\dfrac{1}{2},\alpha\right), \left(-\dfrac{1}{2},-\
     
 $$P^{\Delta,\Delta}(\lambda)=\mathbb{R}_ {\geq0}\cdot (\Delta\times (\lambda^{-1}\partial\Delta))=\bigcup_ {i=0}^{2}\mathbb{R}_ {\geq0}\cdot \mathcal{P}_i(\lambda),\qquad \lambda>0,$$
 
-    with $\mathcal{P}_ i(\lambda):=\Delta\times[\lambda^{-1}\Delta_{i},\lambda^{-1}\Delta_{i+1}]$ (taking $i$ module 3).
+  with $\mathcal{P}_ i(\lambda):=\Delta\times[\lambda^{-1}\Delta_{i},\lambda^{-1}\Delta_{i+1}]$ (taking $i$ module 3).
 
 - $S$ denotes a complex of $m$  four-dimensional polyhedral cones with generators in the field $k$:
  
