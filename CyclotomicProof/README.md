@@ -30,9 +30,9 @@ _where_
 
 - $P^{\Delta,\Delta}(\lambda)$ is a complex of three polyhedral four\-dimensional cones contained in $\mathbb{C}\times\mathbb{C}$, characterized in [Lemma 10: Attractor\-Repeller](https://www.sciencedirect.com/science/article/pii/S0022314X23002299) as:
 
-$$P^{\Delta,\Delta}(\lambda)=\mathbb{R}_{\geq0}\cdot (\Delta\times (\lambda^{-1}\partial\Delta))=\bigcup_{i=0}^{2}\mathbb{R}_{\geq0}\cdot \mathcal{P}_i(\lambda),\qquad \lambda>0,$$
+  $$P^{\Delta,\Delta}(\lambda)=\mathbb{R}_{\geq0}\cdot (\Delta\times (\lambda^{-1}\partial\Delta))=\bigcup_{i=0}^{2}\mathbb{R}_{\geq0}\cdot \mathcal{P}_i(\lambda),\qquad \lambda>0,$$
   
-  with $\mathcal{P}_i(\lambda):=\Delta\times[\lambda^{-1}\Delta_{i},\lambda^{-1}\Delta_{i+1}]$ (take $i$ module 3).
+with $\mathcal{P}_i(\lambda):=\Delta\times[\lambda^{-1}\Delta_{i},\lambda^{-1}\Delta_{i+1}]$ (take $i$ module 3).
 
 - $S$ denotes a complex of $m$  four-dimensional polyhedral cones with generators in the field $k$:
  
