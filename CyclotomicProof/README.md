@@ -21,7 +21,7 @@ $$w=(\zeta_m^{\ell},\zeta_m),\quad \text{ where } \ell=3 \text{ if } m=8,10, \te
 
 <ins>Lemma I.</ins>  There are $c'>0$ and $d'>0$ such that $P^{\Delta,\Delta}(c')\subset S\subset P^{\Delta,\Delta}(d')$.
 
-<u>Lemma II.</u>  $u\cdot S\subset S$.
+<ins>Lemma II.</ins>  $u\cdot S\subset S$.
 
 _where_
 
@@ -49,7 +49,7 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
 
 ## Proof of the two Lemmas:
 
-- _**Proof of Lemma I.**_ Open the computational algebraic system
+- <ins>**Proof of Lemma I.**</ins> Open the computational algebraic system
   [PARI/GP](https://pari.math.u-bordeaux.fr/) and loading the file [CycloAlgorithm.gp](https://github.com/acapunay-math/ShintaniTorK41/blob/main/CyclotomicProof/CyclotAlgorithm.gp) using the command
   ```
   \r CycloAlgorithm.gp
@@ -62,7 +62,7 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
 
   where we taking as input $p=x^4+1$, $x^4-x^3+x^2-x+1$, $x^4-x^2+1$.
  
-<u>**Step 1:**</u>  Since the cones in $P^{\Delta,\Delta}(\lambda)$ do not necessarily have their generators in $k$,  we need below to consider $f$, to be linear map which it is little perturbation of identity map, called $\varepsilon$\-perturbation of identity, and as $k$ is dense in $\mathbb{R}^4$, we can always obtain one new polyhedral complex $f(P^{\Delta,\Delta}(\lambda))$ from $P^{\Delta,\Delta}(\lambda)$, now with generators in $k$. For this, we apply the command 
+<ins>**Step 1:**</ins>  Since the cones in $P^{\Delta,\Delta}(\lambda)$ do not necessarily have their generators in $k$,  we need below to consider $f$, to be linear map which it is little perturbation of identity map, called $\varepsilon$\-perturbation of identity, and as $k$ is dense in $\mathbb{R}^4$, we can always obtain one new polyhedral complex $f(P^{\Delta,\Delta}(\lambda))$ from $P^{\Delta,\Delta}(\lambda)$, now with generators in $k$. For this, we apply the command 
   ```
   [A,R]=ApproxRComplex(bnf,c,d);
   ```
@@ -78,7 +78,7 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
 
 $$A:=f(P^{\Delta,\Delta}(c)),\quad R:=f(P^{\Delta,\Delta}(d)).$$
 
-<u>**Step 2:**</u> Now apply the following command in the pair $(A,R)$ of the previous step
+<ins>**Step 2:**</ins> Now apply the following command in the pair $(A,R)$ of the previous step
   ```
   [D1,D2]=DiffComplex1(bnf,A,R);
   ```
@@ -97,7 +97,7 @@ $$f(P^{\Delta,\Delta}(c))\subset S\subset f(P^{\Delta,\Delta}(d)).$$
 
   **Remark:** We note that here cannot apply the command DiffComplex1\(\-\-\) directly on the complexes  $P^{\Delta,\Delta}(c)$ and $P^{\Delta,\Delta}(d)$, because such complexes are not $k$\-rational, that is, their generators are not elements of number field $k$. In the folder [ListCyclotomic](??) we show the explicit construction of such complexes $S$, $A$ and $R$. 
   
-<u>**Step 3:**</u> By [Lemma 15: Attractor\-Repeller](https://www.sciencedirect.com/science/article/pii/S0022314X23002299), we can explicitly obtain positive constants $c'>0$ and $d'>0$ to ensure that
+<ins>**Step 3:**</ins> By [Lemma 15: Attractor\-Repeller](https://www.sciencedirect.com/science/article/pii/S0022314X23002299), we can explicitly obtain positive constants $c'>0$ and $d'>0$ to ensure that
 
 $$P^{\Delta,\Delta}(c')\subset f(P^{\Delta,\Delta}(c)),\qquad f(P^{\Delta,\Delta}(d))\subset P^{\Delta,\Delta}(d').$$
 
@@ -119,7 +119,7 @@ $$P^{\Delta,\Delta}(c')\subset S\subset P^{\Delta,\Delta}(d').$$
 
   Completing the Proof of Lemma I.
 
-- _**Proof of Lemma II:**_ Using the fundamental units $u$ given above for each $m=8,10,12$, we can verify that $$u\cdot S\subset S.$$
+- <ins>**Proof of Lemma II:**</ins> Using the fundamental units $u$ given above for each $m=8,10,12$, we can verify that $$u\cdot S\subset S.$$
   For this, we apply the following command
   ```
   D=DiffComplex2(bnf,u);
