@@ -115,9 +115,7 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
 
   So, by Steps 2 and 3, we have
 
-  $$
-  P^{\Delta,\Delta}(c')\subset S\subset P^{\Delta,\Delta}(d').
-  $$
+    $$P^{\Delta,\Delta}(c')\subset S\subset P^{\Delta,\Delta}(d').$$
 
   Completing the Proof of Lemma I.
 
