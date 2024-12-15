@@ -23,7 +23,7 @@ $$w=(\zeta_m^{\ell},\zeta_m),\quad \text{ where } \ell=3 \text{ if } m=8,10, \te
 
 <u>Lemma II.</u>  $u\cdot S\subset S$.
 
-_where_ 
+_where_
 
 - $\Delta:=[\Delta_0,\Delta_1,\Delta_2]$ denotes a triangle in $\mathbb{C}$ whose vertices are one approximation of cubic roots of unity:
 
@@ -31,7 +31,7 @@ _where_
 
 - $P^{\Delta,\Delta}(\lambda)$ is a complex of three polyhedral four\-dimensional cones contained in $\mathbb{C}\times\mathbb{C}$, characterized in [Lemma 10: Attractor\-Repeller](https://www.sciencedirect.com/science/article/pii/S0022314X23002299) as:
     
-    $$P^{\Delta,\Delta}(\lambda)=\mathbb{R}_{\geq0}\cdot (\Delta\times (\lambda^{-1}\partial\Delta))=\displaystyle\bigcup_{j=0}^{m-1} \mathbb{R}$$
+    $$P^{\Delta,\Delta}(\lambda)=\mathbb{R}_{\geq0}\cdot (\Delta\times (\lambda^{-1}\partial\Delta))$$
     
      $$P^{\Delta,\Delta}(\lambda)=\mathbb{R}_{\geq0}\cdot (\Delta\times (\lambda^{-1}\partial\Delta))=\bigcup_{i=0}^{2}\mathbb{R}_{\geq0}\cdot \mathcal{P}_i(\lambda),\qquad \lambda>0,$$
 
