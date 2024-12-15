@@ -85,13 +85,11 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
 
   to obtain the difference\-sets
 
-  $$D_ 1:=A-S,\qquad D_2:=S-R.$$
+     $$D_ 1:=A-S,\qquad D_2:=S-R.$$
 
   Since we obtain that such difference\-sets are both empty, then this implies that
 
-  $$
-  A\subset S \subset R.
-  $$
+     $$A\subset S \subset R.$$
 
   That is,
 
