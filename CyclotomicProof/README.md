@@ -31,7 +31,7 @@ _where_
 
 - $P^{\Delta,\Delta}(\lambda)$ is a complex of three polyhedral four\-dimensional cones contained in $\mathbb{C}\times\mathbb{C}$, characterized in [Lemma 10: Attractor\-Repeller](https://www.sciencedirect.com/science/article/pii/S0022314X23002299) as:
     
-     $$P^{\Delta,\Delta}(\lambda)=\mathbb{R}_{\geq0}\cdot (\Delta\times (\lambda^{-1}\partial\Delta))={\bigcup}_{i=0}$$
+$$P^{\Delta,\Delta}(\lambda)=\mathbb{R}_{\geq0}\cdot (\Delta\times (\lambda^{-1}\partial\Delta))=\bigcup \mathbb{R}_{\geq0}$$
     
      $$P^{\Delta,\Delta}(\lambda)=\mathbb{R}_{\geq0}\cdot (\Delta\times (\lambda^{-1}\partial\Delta))=\bigcup_{i=0}^{2}\mathbb{R}_{\geq0}\cdot \mathcal{P}_i(\lambda),\qquad \lambda>0,$$
 
