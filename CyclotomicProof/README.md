@@ -29,18 +29,22 @@ _where_
   $$\Delta = \Big[(1,0), \left(-\dfrac{1}{2},\alpha\right), \left(-\dfrac{1}{2},-\alpha\right)\Big] \approx \Big[1,\zeta_3,\zeta_3^2\Big],\qquad \alpha:=\dfrac{2521}{2911}.$$
 
 - $P^{\Delta,\Delta}(\lambda)$ is a complex of three polyhedral four\-dimensional cones contained in $\mathbb{C}\times\mathbb{C}$, characterized in [Lemma 10: Attractor\-Repeller](https://www.sciencedirect.com/science/article/pii/S0022314X23002299) as:
-  $$P^{\Delta,\Delta}(\lambda)=\mathbb{R}_{\geq0}\cdot (\Delta\times (\lambda^{-1}\partial\Delta))=\bigcup_{i=0}^{2}\mathbb{R}_{\geq0}\cdot \mathcal{P}_i(\lambda),\qquad \lambda>0,$$
+
+$$P^{\Delta,\Delta}(\lambda)=\mathbb{R}_{\geq0}\cdot (\Delta\times (\lambda^{-1}\partial\Delta))=\bigcup_{i=0}^{2}\mathbb{R}_{\geq0}\cdot \mathcal{P}_i(\lambda),\qquad \lambda>0,$$
+  
   with $\mathcal{P}_i(\lambda):=\Delta\times[\lambda^{-1}\Delta_{i},\lambda^{-1}\Delta_{i+1}]$ (take $i$ module 3).
 
 - $S$ denotes a complex of $m$  four-dimensional polyhedral cones with generators in the field $k$:
-  $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdot\text{Cone}[1,w,w^2,w^3].$$
+ 
+$$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdot\text{Cone}[1,w,w^2,w^3].$$
 
 - $u=(u_1,u_2)\in\mathbb{C}\times\mathbb{C}$ is a fundamental unit of $k$ such that $|u_1|<1$:
-  |   $m$  | $u$ |
-  |:---------------:| -------------:|
-  |        8 |          $\theta^2+\theta+1$ |
-  |         10     |     $-\theta+1$  |      
-  |     12     |    $-\theta^3-\theta^2$ |
+
+|   $m$  | $u$ |
+|:---------------:| -------------:|
+|        8 |          $\theta^2+\theta+1$ |
+|         10     |     $-\theta+1$  |      
+|     12     |    $-\theta^3-\theta^2$ |
 
 ## Proof of the two Lemmas:
 
