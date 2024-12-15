@@ -85,21 +85,21 @@ $$A:=f(P^{\Delta,\Delta}(c)),\quad R:=f(P^{\Delta,\Delta}(d)).$$
 
   to obtain the difference\-sets
 
-     $$D_ 1:=A-S,\qquad D_2:=S-R.$$
+$$D_ 1:=A-S,\qquad D_2:=S-R.$$
 
   Since we obtain that such difference\-sets are both empty, then this implies that
 
-     $$A\subset S \subset R.$$
+$$A\subset S \subset R.$$
 
   That is,
 
-     $$f(P^{\Delta,\Delta}(c))\subset S\subset f(P^{\Delta,\Delta}(d)).$$
+$$f(P^{\Delta,\Delta}(c))\subset S\subset f(P^{\Delta,\Delta}(d)).$$
 
   **Remark:** We note that here cannot apply the command DiffComplex1\(\-\-\) directly on the complexes  $P^{\Delta,\Delta}(c)$ and $P^{\Delta,\Delta}(d)$, because such complexes are not $k$\-rational, that is, their generators are not elements of number field $k$. In the folder [ListCyclotomic](??) we show the explicit construction of such complexes $S$, $A$ and $R$. 
   
-  <u>**Step 3:**</u> By [Lemma 15: Attractor\-Repeller](https://www.sciencedirect.com/science/article/pii/S0022314X23002299), we can explicitly obtain positive constants $c'>0$ and $d'>0$ to ensure that
+<u>**Step 3:**</u> By [Lemma 15: Attractor\-Repeller](https://www.sciencedirect.com/science/article/pii/S0022314X23002299), we can explicitly obtain positive constants $c'>0$ and $d'>0$ to ensure that
 
-     $$P^{\Delta,\Delta}(c')\subset f(P^{\Delta,\Delta}(c)),\qquad f(P^{\Delta,\Delta}(d))\subset P^{\Delta,\Delta}(d').$$
+$$P^{\Delta,\Delta}(c')\subset f(P^{\Delta,\Delta}(c)),\qquad f(P^{\Delta,\Delta}(d))\subset P^{\Delta,\Delta}(d').$$
 
   For this, we use the following command 
   ```
@@ -115,7 +115,7 @@ $$A:=f(P^{\Delta,\Delta}(c)),\quad R:=f(P^{\Delta,\Delta}(d)).$$
 
   So, by Steps 2 and 3, we have that
 
-    $$P^{\Delta,\Delta}(c')\subset S\subset P^{\Delta,\Delta}(d').$$
+$$P^{\Delta,\Delta}(c')\subset S\subset P^{\Delta,\Delta}(d').$$
 
   Completing the Proof of Lemma I.
 
