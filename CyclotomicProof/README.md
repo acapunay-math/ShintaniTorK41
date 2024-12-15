@@ -42,11 +42,13 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
 - $u=(u_1,u_2)\in\mathbb{C}\times\mathbb{C}$ is a fundamental unit of $k$ such that $|u_1|<1$:
 
 <center>
+
 |   $m$  | $u$ |
 |:---------------:| -------------:|
 |        8 |          $\theta^2+\theta+1$ |
 |         10     |     $-\theta+1$  |      
 |     12     |    $-\theta^3-\theta^2$ |
+
 </center>
 
 ## Proof of the two Lemmas:
