@@ -76,7 +76,7 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
 
   So we can obtain two complexes $(A,R)$ of $k$\-rational four\-dimensional polyhedral cones \(a pair each cyclotomic field $k$\):
 
-    $$A:=f(P^{\Delta,\Delta}(c)),\quad R:=f(P^{\Delta,\Delta}(d)).$$
+     $$A:=f(P^{\Delta,\Delta}(c)),\quad R:=f(P^{\Delta,\Delta}(d)).$$
 
   <u>**Step 2:**</u> Now apply the following command in the pair $(A,R)$ of the previous step
   ```
@@ -85,9 +85,7 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
 
   to obtain the difference\-sets
 
-  $$
-  D_1:=A-S,\qquad D_2:=S-R.
-  $$
+  $$D_ 1:=A-S,\qquad D_2:=S-R.$$
 
   Since we obtain that such difference\-sets are both empty, then this implies that
 
