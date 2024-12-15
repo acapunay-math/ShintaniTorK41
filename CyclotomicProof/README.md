@@ -93,18 +93,13 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
 
   That is,
 
-  $$
-  f(P^{\Delta,\Delta}(c))\subset S\subset f(P^{\Delta,\Delta}(d)).
-  $$
+     $$f(P^{\Delta,\Delta}(c))\subset S\subset f(P^{\Delta,\Delta}(d)).$$
 
   **Remark:** We note that here cannot apply the command DiffComplex1\(\-\-\) directly on the complexes  $P^{\Delta,\Delta}(c)$ and $P^{\Delta,\Delta}(d)$, because such complexes are not $k$\-rational, that is, their generators are not elements of number field $k$. In the folder [ListCyclotomic](??) we show the explicit construction of such complexes $S$, $A$ and $R$. 
   
   <u>**Step 3:**</u> By [Lemma 15: Attractor\-Repeller](https://www.sciencedirect.com/science/article/pii/S0022314X23002299), we can explicitly obtain positive constants $c'>0$ and $d'>0$ to ensure that
 
-  $$
-  P^{\Delta,\Delta}(c')\subset f(P^{\Delta,\Delta}(c)),\qquad 
-    f(P^{\Delta,\Delta}(d))\subset P^{\Delta,\Delta}(d').
-  $$
+     $$P^{\Delta,\Delta}(c')\subset f(P^{\Delta,\Delta}(c)),\qquad f(P^{\Delta,\Delta}(d))\subset P^{\Delta,\Delta}(d').$$
 
   For this, we use the following command 
   ```
