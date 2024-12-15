@@ -76,7 +76,7 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
 
   So we can obtain two complexes $(A,R)$ of $k$\-rational four\-dimensional polyhedral cones \(a pair each cyclotomic field $k$\):
 
-     $$A:=f(P^{\Delta,\Delta}(c)),\quad R:=f(P^{\Delta,\Delta}(d)).$$
+  $$A:=f(P^{\Delta,\Delta}(c)),\quad R:=f(P^{\Delta,\Delta}(d)).$$
 
   <u>**Step 2:**</u> Now apply the following command in the pair $(A,R)$ of the previous step
   ```
@@ -113,7 +113,7 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
   | $10$ | $1/6$ | $4$ | $\dfrac{3518892479}{26481431049}\approx 0.132$ | $\dfrac{242139697}{51405543}\approx 4.710$ |
   | $12$ | $1/8$ | $2$ | $\dfrac{3299787329}{35272057207}\approx 0.093$ | $\dfrac{121800199}{54326945}\approx 2.241$ |
 
-  So, by Steps 2 and 3, we have
+  So, by Steps 2 and 3, we have that
 
     $$P^{\Delta,\Delta}(c')\subset S\subset P^{\Delta,\Delta}(d').$$
 
@@ -125,5 +125,5 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
   D=DiffComplex2(bnf,u);
   ```
 
-  which compute the difference $u\cdot S-S$ of these complexes. In the three cases \($m=8,10,$ and $12$\), our implementation return empty\-set. That is, the \(polyhedral\) complex $u\cdot S$ is contained in the complex $S$. Completing the Proof of Lemma II.
+  which compute the difference $u\cdot S-S$ of these complexes. In the three cases \($m=8,10,$ and $12$\) considered, our implementation return empty\-set. That is, the \(polyhedral\) complex $u\cdot S$ is contained in the complex $S$. Completing the Proof of Lemma II.
 
