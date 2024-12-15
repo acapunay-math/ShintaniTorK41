@@ -116,12 +116,17 @@ $$P^{\Delta,\Delta}(c')\subset f(P^{\Delta,\Delta}(c)),\qquad f(P^{\Delta,\Delta
   ```
 
   On which returns the following parameters $(c',d')$ according to each $(c,d)$ and $\varepsilon=1/150$: 
+  
+  <div align="center">
+  
   | $m$ | $c$ | $d$ |                      $c'$ |                                       $d'$ |
   | :--- | :---- | :-- | :--------------------------------------------: | -----------------------------------------: |
   | $8$ | $1/5$ | $5$ | $\dfrac{1814222527}{11043058985}\approx 0.164$ | $\dfrac{151154723}{24972421}\approx 6.052$ |
   | $10$ | $1/6$ | $4$ | $\dfrac{3518892479}{26481431049}\approx 0.132$ | $\dfrac{242139697}{51405543}\approx 4.710$ |
   | $12$ | $1/8$ | $2$ | $\dfrac{3299787329}{35272057207}\approx 0.093$ | $\dfrac{121800199}{54326945}\approx 2.241$ |
 
+  </div>
+  
   So, by Steps 2 and 3, we have that
 
 $$P^{\Delta,\Delta}(c')\subset S\subset P^{\Delta,\Delta}(d').$$
