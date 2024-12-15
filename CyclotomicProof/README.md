@@ -72,11 +72,16 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
   ```
 
   considering the following parameters $(c,d)$ according to each $p$ taken:
+  
+  <div align="center">
+  
   | $p$ |  $c$ | $d$ |
   | :---------------- | :---: | --: |
   | $x^4+1$ | $1/5$ | $5$ |
   | $x^4-x^3+x^2-x+1$ | $1/6$ | $4$ |
   | $x^4-x^2+1$ | $1/8$ | $2$ |
+  
+  </div>
 
   So we can obtain two complexes $(A,R)$ of $k$\-rational four\-dimensional polyhedral cones \(a pair each cyclotomic field $k$\):
 
