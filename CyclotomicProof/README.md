@@ -104,7 +104,7 @@ $$A\subset S \subset R.$$
 
 $$f(P^{\Delta,\Delta}(c))\subset S\subset f(P^{\Delta,\Delta}(d)).$$
 
-  **Remark:** We note that here cannot apply the command DiffComplex1\(\-\-\) directly on the complexes  $P^{\Delta,\Delta}(c)$ and $P^{\Delta,\Delta}(d)$, because such complexes are not $k$\-rational, that is, their generators are not elements of number field $k$. In the folder [CyclotomicComplexes](??) we show the explicit construction of such complexes $S$, $A$ and $R$. 
+  **Remark:** We note that here cannot apply the command DiffComplex1\(\-\-\) directly on the complexes  $P^{\Delta,\Delta}(c)$ and $P^{\Delta,\Delta}(d)$, because such complexes are not $k$\-rational, that is, their generators are not elements of number field $k$. In the folder [CyclotomicComplexes](https://github.com/acapunay-math/ShintaniTorK41/tree/main/CyclotomicProof/CyclotomicComplexes) we show the explicit construction of such complexes $S$, $A$ and $R$. 
   
 <ins>**Step 3:**</ins> By [Lemma 15: Attractor\-Repeller](https://www.sciencedirect.com/science/article/pii/S0022314X23002299), we can explicitly obtain positive constants $c'>0$ and $d'>0$ to ensure that
 
@@ -142,5 +142,5 @@ $$u\cdot S\subset S.$$
   D=DiffComplex2(bnf,u);
   ```
 
-  which compute the difference $u\cdot S-S$ of these complexes. In the three cases \($m=8,10,$ and $12$\) considered, our implementation return empty\-set. That is, the \(polyhedral\) complex $u\cdot S$ is contained in the complex $S$. Completing the Proof of Lemma II.
+  which compute the difference $D:=u\cdot S-S$ of these complexes. In the three cases \($m=8,10,$ and $12$\) considered, our implementation return empty\-set. That is, the \(polyhedral\) complex $u\cdot S$ is contained in the complex $S$. Completing the Proof of Lemma II.
 
