@@ -1,6 +1,10 @@
+# Cyclotomic Complexes
+
+ This is a README of the files: [PCyclotomicc.txt](https://github.com/acapunay-math/ShintaniTorK41/blob/main/CyclotomicProof/CyclotomicComplexes/PCyclotomicc.txt) and [PCyclotmic-ML.sage](https://github.com/acapunay-math/ShintaniTorK41/blob/main/CyclotomicProof/CyclotomicComplexes/PCyclotomicc-ML.sage)
+
 ## A k-rational complex of cones for three cyclotomic number fields  
 
-  Here we show the three complexes of $k$-rational four-dimensional polyhedral cones, denotes by $S$, $A$ and $R$, for each one of the cyclotomic quartic number fields $k=\mathbb{Q}(\mathrm{e}^{2\Pi i/m})$, $m=8, 10, 12$, whose minimal polinomial $p$ is
+   Here we show the three complexes of $k$-rational four-dimensional polyhedral cones, denotes by $S$, $A$ and $R$, for each one of the cyclotomic quartic number fields $k=\mathbb{Q}(\mathrm{e}^{2\Pi i/m})$, $m=8, 10, 12$, whose minimal polinomial $p$ is
   
    $$p:=x^4+1,\quad x^4-x^3+x^2-x+1,\quad x^4-x^2+1,$$
   
