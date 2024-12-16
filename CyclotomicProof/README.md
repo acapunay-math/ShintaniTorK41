@@ -33,7 +33,7 @@ $$\Delta = \Big[(1,0), \left(-\dfrac{1}{2},\alpha\right), \left(-\dfrac{1}{2},-\
     
 $$P^{\Delta,\Delta}(\lambda)=\mathbb{R}_ {\geq0}\cdot (\Delta\times (\lambda^{-1}\partial\Delta))=\bigcup_ {i=0}^{2}\mathbb{R}_ {\geq0}\cdot \mathcal{P}_i(\lambda),\qquad \lambda>0,$$
 
-  with $\mathcal{P}_ i(\lambda):=\Delta\times[\lambda^{-1}\Delta_{i},\lambda^{-1}\Delta_{i+1}]$ (taking $i$ module 3).
+  with $\mathcal{P}_ i(\lambda):=\Delta\times[\lambda^{-1}\Delta_{i},\lambda^{-1}\Delta_{i+1}]$ (taking $i$ module 3) to be a triangular prism.
 
 - $S$ denotes a complex of $m$  four-dimensional polyhedral cones with generators in the field $k$:
  
@@ -59,12 +59,12 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
   \r CycloAlgorithm.gp
   ```
 
-  Then fixing one of three cyclotomic quartic fields $k=\mathbb{Q}(\zeta_m)$ for $m=8, 10$, or $12$. For this, we execute on PARI/GP the classical command
+  Then we execute on PARI/GP the following command, which defines one of three cyclotomic quartic fields $k=\mathbb{Q}(\zeta_m)$ for $m=8, 10$, or $12$:
   ```
   bnf=bnfinit(p);
   ```
 
-  where we taking as input $p=x^4+1$, $x^4-x^3+x^2-x+1$, $x^4-x^2+1$.
+  taking as input $p=x^4+1,\quad x^4-x^3+x^2-x+1,\quad x^4-x^2+1$.
  
 <ins>**Step 1:**</ins>  Since the cones in $P^{\Delta,\Delta}(\lambda)$ do not necessarily have their generators in $k$,  we need below to consider $f$, to be linear map which it is little perturbation of identity map, called $\varepsilon$\-perturbation of identity, and as $k$ is dense in $\mathbb{R}^4$, we can always obtain one new polyhedral complex $f(P^{\Delta,\Delta}(\lambda))$ from $P^{\Delta,\Delta}(\lambda)$, now with generators in $k$. For this, we apply the command 
   ```
@@ -87,7 +87,7 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
 
 $$A:=f(P^{\Delta,\Delta}(c)),\quad R:=f(P^{\Delta,\Delta}(d)).$$
 
-<ins>**Step 2:**</ins> Now apply the following command in the pair $(A,R)$ of the previous step
+<ins>**Step 2:**</ins> Now apply the following command on the pair $(A,R)$ of the previous step
   ```
   [D1,D2]=DiffComplex1(bnf,A,R);
   ```
@@ -96,7 +96,7 @@ $$A:=f(P^{\Delta,\Delta}(c)),\quad R:=f(P^{\Delta,\Delta}(d)).$$
 
 $$D_ 1:=A-S,\qquad D_2:=S-R.$$
 
-  Since we obtain that such difference\-sets are both empty, then this implies that
+  Since we obtain that such difference\-sets both return empty, then this implies that
 
 $$A\subset S \subset R.$$
 
@@ -104,7 +104,7 @@ $$A\subset S \subset R.$$
 
 $$f(P^{\Delta,\Delta}(c))\subset S\subset f(P^{\Delta,\Delta}(d)).$$
 
-  **Remark:** We note that here cannot apply the command DiffComplex1\(\-\-\) directly on the complexes  $P^{\Delta,\Delta}(c)$ and $P^{\Delta,\Delta}(d)$, because such complexes are not $k$\-rational, that is, their generators are not elements of number field $k$. In the folder [ListCyclotomic](??) we show the explicit construction of such complexes $S$, $A$ and $R$. 
+  **Remark:** We note that here cannot apply the command DiffComplex1\(\-\-\) directly on the complexes  $P^{\Delta,\Delta}(c)$ and $P^{\Delta,\Delta}(d)$, because such complexes are not $k$\-rational, that is, their generators are not elements of number field $k$. In the folder [CyclotomicComplexes](??) we show the explicit construction of such complexes $S$, $A$ and $R$. 
   
 <ins>**Step 3:**</ins> By [Lemma 15: Attractor\-Repeller](https://www.sciencedirect.com/science/article/pii/S0022314X23002299), we can explicitly obtain positive constants $c'>0$ and $d'>0$ to ensure that
 
@@ -115,7 +115,7 @@ $$P^{\Delta,\Delta}(c')\subset f(P^{\Delta,\Delta}(c)),\qquad f(P^{\Delta,\Delta
   [c',d']=Bounds([c,d]);
   ```
 
-  On which returns the following parameters $(c',d')$ according to each $(c,d)$ and $\varepsilon=1/150$: 
+  On which it returns the following parameters $(c',d')$ according to each $(c,d)$ and $\varepsilon=1/150$: 
   
   <div align="center">
   
@@ -133,7 +133,10 @@ $$P^{\Delta,\Delta}(c')\subset S\subset P^{\Delta,\Delta}(d').$$
 
   Completing the Proof of Lemma I.
 
-- <ins>**Proof of Lemma II:**</ins> Using the fundamental units $u$ given above for each $m=8,10,12$, we can verify that $$u\cdot S\subset S.$$
+- <ins>**Proof of Lemma II:**</ins> Using the fundamental units $u$ mentioned above for each $m=8,10,12$, we can verify that 
+
+$$u\cdot S\subset S.$$
+
   For this, we apply the following command
   ```
   D=DiffComplex2(bnf,u);
