@@ -18,7 +18,6 @@
 \\ https://www.sciencedirect.com/science/article/abs/pii/S0022314X23002299
 
 
-
 /************************************************************************************************************/
 \\ TO PROVE LEMMA I: 
 \\ There are positive constants c' and d' such that P^{Delta,Delta}(c') \subset S \subset P^{Delta,Delta}(d')
@@ -676,3 +675,38 @@ B=vector(#C[2],i,lift(Mod(u^(-1)*C[2][i],poli)));  \\ multiplication of the unit
 B=vector(#B,i,B[i]/abs(content(B[i])));
 return([A,B]);   \\ new representation of the cone u*C=[Generators,Inequalities]
 }
+
+
+
+\\ Given the set L of polynomials L=[x^4+1, x^4-x^3+x^2-x+1, x^4-x^2+1] as INPUT.
+\\ The follows routine created a file which verify:
+\\ f(P^{Delta,Delta}(c)) \subset S \subset f(P^{Delta,Delta}(d))
+
+CyclotomicComplexes(L)= 
+{my(v,a,b,k,p,A,R,m,w,v1,h1,h2,l,S,S1,Q1,Q2,SCineq,SCgen,QCineq1,QCgen1,QCineq2,QCgen2);
+v=vector(3,j);
+a=[1/5,1/6,1/8]; 
+b=[5,4,2];
+for(j=1,3, 
+    k=bnfinit(L[j]); p=k.pol;
+    [A,R]=ApproxRComplex(k,a[j],b[j]); 
+    [m,w]=[k.tu[1],lift(k.tu[2])]; \\ order of torsion m=8, 10, 12, whose generator is "w"
+    v1=precision(conjvec(Mod(w,p)),10000); 
+    [h1,h2]=abs(arg([v1[1],v1[3]]))*(m/(2*Pi)); [h1,h2]=ceil([h1,h2]); l=vecmax([h1,h2]);
+    if([h1,h2]==[1,l], w=lift(Mod(w^l,p)));
+    S=vector(m,j,lift(Mod(w^(j-1)*[1,w,w^2,w^3],p)));
+    S1=kcomplex2(S,k);
+    Q1=kcomplex2(A,k); \\Q1 represent an attractor: Q1 \subset S1
+    Q2=kcomplex2(R,k); \\Q2 represent a repulsor: S1 \subset Q2
+    SCineq=vector(m,i,vector(#S1[i][2],j,[S1[i][2][j],S1[i][3][j]]));\\[inequality,+ or -1],"+1" means ">=0"; "-1" means">0"
+    SCgen=vector(m,i,S1[i][1]); \\ list of cones given generators which represent the closure of the cones in "Cineq"
+    QCineq1=vector(#Q1,i,vector(#Q1[i][2],j,[Q1[i][2][j],Q1[i][3][j]]));
+    QCgen1=vector(#Q1,i,Q1[i][1]); 
+    QCineq2=vector(#Q2,i,vector(#Q2[i][2],j,[Q2[i][2][j],Q2[i][3][j]]));
+    QCgen2=vector(#Q2,i,Q2[i][1]); 
+    v[j]=[[p,w,m], SCineq, SCgen, QCineq1, QCgen1, QCineq2, QCgen2];
+    );
+\\return(v);
+write(Cyclotomicc,"data = ", v, ";");
+}
+
