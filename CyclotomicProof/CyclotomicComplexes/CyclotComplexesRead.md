@@ -12,7 +12,7 @@
   
   $$S:=\bigcup_{j=0}^{m-1} \mathcal{C}_ j,\quad A:=f(P^{\Delta,\Delta}(c)),\quad R:=f(P^{\Delta,\Delta}(d)),$$
   
- mentioned in the proof of [Lemma II](https://github.com/acapunay-math/ShintaniTorK41/tree/main/CyclotomicProof). Such sets satisfy $A\subset S \subset R$.
+ mentioned in the proof of [Lemma I](https://github.com/acapunay-math/ShintaniTorK41/tree/main/CyclotomicProof). Such sets satisfy $A\subset S \subset R$.
 
  The file [Cyclotomicc.txt](https://github.com/acapunay-math/ShintaniTorK41/blob/main/CyclotomicProof/CyclotomicComplexes/Cyclotomicc.txt) is a text file meant to be downloaded and read into PARI GP via the command
 
@@ -48,12 +48,25 @@ with
 * $p=$ quartic irreducible polynomial defining a totally complex number field  $k:= \text{the quotient ring } \mathbb{Q}[X]/(p)$, in our case $p$ is equal to $x^4+1$, $x^4-x^3+x^2-x+1$ or $x^4-x^2+1$.
 
 * $w$ denotes a generator of torsion group of $k$ whose embedding in $\mathbb{C}\times\mathbb{C}$ is of the form 
+
   $$w=(\zeta_m^{\ell},\zeta_m),\quad \text{ where } \ell=3 \text{ if } m=8,10, \text{ and } \ell=5 \text{ if } m=12.$$
 
 * $m=$ order of (full) torsion group of $k$ (here $m=8, 10, 12$).
 
-2. The second entry $a_2$ of $D_i$ (i.e., $data[i][2]$) has the form   $$[C'_0,C'_1,...,C'_{m-1}],$$  which represents a polyhedral complex of $m$ four-dimensional $k$-rational semi-closed cones:
-   $$S:=\left(\bigcup_{j=0}^{m-1}C_j'\right)\cup \{0\},\quad C_j':=C_j-C_{j+1} \quad (\text{ taking } j \text{ modulo } m=8,10,12)$$ $$\text{and } \quad C_j:=w^j\cdot\text{Cone}[1,w,w^2,w^3].$$ Each semi-closed cone $C_j'$ is represented by  4 linear inequalities, in this case by 4 closed or open half-spaces whose closure is $C_j$. Thus, each $C_j'$ has the form    $$[v_1,v_2,v_3,v_4]$$
+2. The second entry $a_2$ of $D_i$ (i.e., $data[i][2]$) has the form   
+  
+  $$[C'_0,C'_1,...,C'_{m-1}],$$  
+  
+  which represents a polyhedral complex of $m$ four-dimensional $k$-rational semi-closed cones:
+  
+   $$S:=\left(\bigcup_{j=0}^{m-1}C_j'\right)\cup \{0\},\quad C_j':=C_j-C_{j+1} \quad (\text{ taking } j \text{ modulo } m=8,10,12)$$
+   
+   $$\text{and } \quad C_j:=w^j\cdot\text{Cone}[1,w,w^2,w^3].$$
+   
+   Each semi-closed cone $C_j'$ is represented by  4 linear inequalities, in this case by 4 closed or open half-spaces whose closure is $C_j$. Thus, each $C_j'$ has the form    
+   
+   $$[v_1,v_2,v_3,v_4]$$
+   
    where $v_i=[w,1]$ or $[w,-1]$ and $w$ is an element of $k$ (depending on $i$ and $j$). If $w$ is followed by $1$, then the corresponding (closed) half-space is the set of elements $x$ of $\mathbb{R}^4$ with $\text{Trace}(xw) \geq 0$. If $w$ is followed by $-1$, then the corresponding (open) half-space is given by $\text{Trace}(xw) > 0$. Here Trace is the extension to $\mathbb{R}^4$ of the trace map from $k$ to $\mathbb{Q}$.
 
 3. The third entry $a_3$ of $D_i$ (i.e., data[i][3]) has the form  
