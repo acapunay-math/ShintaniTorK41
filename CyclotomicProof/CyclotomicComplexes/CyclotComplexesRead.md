@@ -73,7 +73,7 @@ with
     
   $$[C_0,C_1,...,C_{m-1}]$$
     
-    where $C_j$ is the closure in $\mathbb{R}^4$ of the cone $C_j'$ in $a_2$. Each closed cone $C_j$ is given here by its list of generators in $k$ mentioned in the item 2. 
+ where $C_j$ is the closure in $\mathbb{R}^4$ of the cone $C_j'$ in $a_2$. Each closed cone $C_j$ is given here by its list of generators in $k$ mentioned in the item 2. 
 
 4. The fourth entry $a_4$ of $D_i$ (i.e., $data[i][4]$) has the form 
 
