@@ -89,19 +89,23 @@ with
 
  which represents a triangle with vertices in $\mathbb{Q}^2$ in the complex plane $\mathbb{C}$ such that their vertices are an approximation of the unit cubic roots, $\zeta_3=\text{exp}(2\pi i/3)$. 
 
- Each semi-closed cone $A_i$ ($0\leq i\leq 2$) is given in the same form as in item 3, that is, each $A_i$ is represented by intersection of closed or open half-spaces. In this case, each $A_i$ is given by 5 inequalities.
+ Each semi-closed cone $A_i$ ($0\leq i\leq 2$) is given in the same form as in item 2, that is, each $A_i$ is represented by intersection of closed or open half-spaces. In this case, each $A_i$ is given by 5 inequalities.
 
-5. The fifth entry  $a_5$ of $D_i$ (i.e., $data[i][5]$) has the form  
-   $$[\overline{A}_0,\overline{A}_1,\overline{A}_2]$$
-   where $\overline{A}_i$ is the closure in $\mathbb{R}^4$ of the cone $A_i$ in $a_4$. Each closed cone $\overline{A}_i$ is represented by 6 generators in $k$.    
+5. The fifth entry  $a_5$ of $D_i$ (i.e., $data[i][5]$) has the form 
+
+  $$[\overline{A}_0,\overline{A}_1,\overline{A}_2]$$
+   
+ where $\overline{A}_i$ is the closure in $\mathbb{R}^4$ of the cone $A_i$ in $a_4$. Each closed cone $\overline{A}_i$ is represented by 6 generators in $k$. 
 
 6. The sixth entry $a_6$ of $D_i$ (i.e., $data[i][6]$) has the same form as in $a_4$:
-   $$[R_0,R_1,R_2]$$
+
+  $$[R_0,R_1,R_2]$$
    
-   which represents to the polyhedral complex of 3 four-dimensional $k$-rational semi-closed cones: 
+ which represents to the polyhedral complex of 3 four-dimensional $k$-rational semi-closed cones: 
    
-   $$R:=f(P^{\Delta,\Delta}(d))=\bigcup_{i=0}^2R_i,$$
-   for the following parameters: $(c,m)=(5,8), (4,10), (2,12)$. Again all cones $R_i$ are represent by 5 close or open half-spaces.
+  $$R:=f(P^{\Delta,\Delta}(d))=\bigcup_{i=0}^2R_i,$$
+  
+ for the following parameters: $(c,m)=(5,8), (4,10), (2,12)$. Again all cones $R_i$ are represent by 5 close or open half-spaces.
    
 7. The seventh entry $a_7$ of $D_i$ (i.e. $data[i][7]$) like $a_5$ has the form 
    $$[\overline{R}_0,\overline{R}_1,\overline{R}_2]$$
