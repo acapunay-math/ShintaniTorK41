@@ -71,7 +71,7 @@ with
 
 3. The third entry $a_3$ of $D_i$ (i.e., data[i][3]) has the form 
     
-    $$[C_0,C_1,...,C_{m-1}]$$ 
+  $$[C_0,C_1,...,C_{m-1}]$$
     
     where $C_j$ is the closure in $\mathbb{R}^4$ of the cone $C_j'$ in $a_2$. Each closed cone $C_j$ is given here by its list of generators in $k$ mentioned in the item 2. 
 
