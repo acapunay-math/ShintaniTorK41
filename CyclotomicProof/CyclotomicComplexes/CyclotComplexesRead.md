@@ -108,6 +108,7 @@ with
  for the following parameters: $(c,m)=(5,8), (4,10), (2,12)$. Again all cones $R_i$ are represent by 5 close or open half-spaces.
    
 7. The seventh entry $a_7$ of $D_i$ (i.e. $data[i][7]$) like $a_5$ has the form 
-   $$[\overline{R}_0,\overline{R}_1,\overline{R}_2]$$
-   where $\overline{R}_i$ is the closure in $\mathbb{R}^4$ of the cone $R_i$ in $a_6$, and each closed cone $\overline{R}_i$ is represented by 6 generators in $k$.
+
+  $$[\overline{R}_0,\overline{R}_1,\overline{R}_2]$$
+ where $\overline{R}_i$ is the closure in $\mathbb{R}^4$ of the cone $R_i$ in $a_6$, and each closed cone $\overline{R}_i$ is represented by 6 generators in $k$.
 
