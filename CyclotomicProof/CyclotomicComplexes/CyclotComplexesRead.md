@@ -89,7 +89,7 @@ with
 
  which represents a triangle with vertices in $\mathbb{Q}^2$ in the complex plane $\mathbb{C}$ such that their vertices are an approximation of the unit cubic roots, $\zeta_3=\text{exp}(2\pi i/3)$. 
 
- Each semi-closed cone $A_i$ ($0\leq i\leq 2$) has the same structure as in item 2, in this case each $A_i$ is represented by intersection of 5 closed or open half-spaces. 
+ Each semi-closed cone $A_ i$ ($0\leq i\leq 2$) has the same structure as the complex $a_ 2$ of item 2, in this case each $A_i$ is represented by intersection of 5 closed or open half-spaces. 
 
 5. The fifth entry  $a_ 5$ of $D_i$ (i.e., $data[i][5]$) has the form 
 
