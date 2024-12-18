@@ -55,7 +55,7 @@ with
 
 2. The second entry $a_ 2$ of $D_ i$ (i.e., $data[i][2]$) has the form 
 
-  $$[C'_0],$$
+  $$[C'_0,C'_1],$$
   
   which represents a polyhedral complex of $m$ four-dimensional $k$-rational semi-closed cones:
   
