@@ -91,11 +91,11 @@ with
 
  Each semi-closed cone $A_i$ ($0\leq i\leq 2$) has the same structure as in item 2, in this case each $A_i$ is represented by intersection of 5 closed or open half-spaces. 
 
-5. The fifth entry  $a_5$ of $D_i$ (i.e., $data[i][5]$) has the form 
+5. The fifth entry  $a_ 5$ of $D_i$ (i.e., $data[i][5]$) has the form 
 
   $$[\overline{A}_0,\overline{A}_1,\overline{A}_2]$$
    
- where $\overline{A}_i$ is the closure in $\mathbb{R}^4$ of the cone $A_i$ in $a_ 4$. Each closed cone $\overline{A}_i$ is represented by 6 generators in $k$. 
+ where $\overline{A}_ i$ is the closure in $\mathbb{R}^4$ of the cone $A_ i$ in $a_ 4$. Each closed cone $\overline{A}_i$ is represented by 6 generators in $k$. 
 
 6. The sixth entry $a_ 6$ of $D_ i$ (i.e., $data[i][6]$) has the same structure as in $a_4$:
 
@@ -105,7 +105,7 @@ with
    
   $$R:=f(P^{\Delta,\Delta}(d))=\bigcup_{i=0}^2R_i,$$
   
- considering the following parameters: $(c,m)=(5,8), (4,10), (2,12)$. Again all cones $R_i$ are represented by 5 close or open half-spaces.
+ considering the following parameters: $(d,m)=(5,8), (4,10), (2,12)$. Again all cones $R_i$ are represented by 5 close or open half-spaces.
    
 7. The seventh entry $a_ 7$ of $D_ i$ (i.e. $data[i][7]$) has the same structure as $a_5$
 
