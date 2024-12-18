@@ -35,7 +35,7 @@ The file PCyclotomicc.txt contains a data of three vectors. It consists of one l
 
   $$data = [D_1,D_2,D_3];$$
 
-ending in a semicolon (to prevent PARI GP from printing this big  file to screen). Each $D_i$ (i.e., $data[i]$ for $1\leq i\leq 3$) has the form  
+ending in a semicolon (to prevent PARI GP from printing this big  file to screen). Each $D_i$ (i.e., $data[i]$ for $1\leq i\leq 3$) has the form 
 
   $$[a_1,a_2,a_3,a_4,a_5,a_6,a_7]$$
 
@@ -57,25 +57,26 @@ with
 
   $$[C'_ 0,C'_ 1,\ldots,C'_ {m-1}],$$
   
-  $$[C'_ 0,C'_ 1,\ldots,C'_{m-1}]$$
-  
   which represents a polyhedral complex of $m$ four-dimensional $k$-rational semi-closed cones:
   
    $$S:=\left(\bigcup_{j=0}^{m-1}C_j'\right)\cup \{0\},\quad C_j':=C_j-C_{j+1} \quad (\text{ taking } j \text{ modulo } m=8,10,12)$$
    
    $$\text{and } \quad C_j:=w^j\cdot\text{Cone}[1,w,w^2,w^3].$$
    
-   Each semi-closed cone $C_j'$ is represented by  4 linear inequalities, in this case by 4 closed or open half-spaces whose closure is $C_j$. Thus, each $C_j'$ has the form    
+   Each semi-closed cone $C_j'$ is represented by  4 linear inequalities, in this case by 4 closed or open half-spaces whose closure is $C_j$. Thus, each $C_j'$ has the form 
    
    $$[v_1,v_2,v_3,v_4]$$
    
    where $v_i=[w,1]$ or $[w,-1]$ and $w$ is an element of $k$ (depending on $i$ and $j$). If $w$ is followed by $1$, then the corresponding (closed) half-space is the set of elements $x$ of $\mathbb{R}^4$ with $\text{Trace}(xw) \geq 0$. If $w$ is followed by $-1$, then the corresponding (open) half-space is given by $\text{Trace}(xw) > 0$. Here Trace is the extension to $\mathbb{R}^4$ of the trace map from $k$ to $\mathbb{Q}$.
 
-3. The third entry $a_3$ of $D_i$ (i.e., data[i][3]) has the form  
+3. The third entry $a_3$ of $D_i$ (i.e., data[i][3]) has the form 
+    
     $$[C_0,C_1,...,C_{m-1}]$$ 
+    
     where $C_j$ is the closure in $\mathbb{R}^4$ of the cone $C_j'$ in $a_2$. Each closed cone $C_j$ is given here by its list of generators in $k$ mentioned in the item 2. 
 
-4. The fourth entry $a_4$ of $D_i$ (i.e., $data[i][4]$) has the form  
+4. The fourth entry $a_4$ of $D_i$ (i.e., $data[i][4]$) has the form 
+
    $$[A_0,A_1,A_2]$$ 
    
    which represents a polyhedral complex of 3 four-dimensional $k$-rational semi-closed cones: 
