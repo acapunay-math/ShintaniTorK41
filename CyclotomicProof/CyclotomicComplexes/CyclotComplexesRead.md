@@ -77,16 +77,19 @@ with
 
 4. The fourth entry $a_4$ of $D_i$ (i.e., $data[i][4]$) has the form 
 
-   $$[A_0,A_1,A_2]$$ 
+  $$[A_0,A_1,A_2]$$ 
    
-   which represents a polyhedral complex of 3 four-dimensional $k$-rational semi-closed cones: 
-   $$A:=f(P^{\Delta,\Delta}(c))=\bigcup_{i=0}^2A_i,$$
-   where $P^{\Delta,\Delta}(c)$ is the polyhedral complex described in  [Lemma 10: Attractor-Repeller](https://www.sciencedirect.com/science/article/pii/S0022314X23002299) and the map $f$ is an $\varepsilon$-perturbation linear of identity described in [Section 4.4: Attractor-Repeller](https://www.sciencedirect.com/science/article/pii/S0022314X23002299) (taking $\varepsilon\leq 1/150$). Moreover to build such $A$ we consider the parameters: $(c,m)=(1/5,8), (1/6,10), (1/8,12)$ and we take 
-   $$\Delta = \left[(1,0), (-1/2,\alpha), (-1/2,-\alpha)\right] \approx [1,\zeta_3,\zeta_3^2],\qquad \alpha:=\dfrac{2521}{2911},$$ 
+ which represents a polyhedral complex of 3 four-dimensional $k$-rational semi-closed cones: 
+  
+  $$A:=f(P^{\Delta,\Delta}(c))=\bigcup_{i=0}^2A_i,$$
+  
+ where $P^{\Delta,\Delta}(c)$ is the polyhedral complex described in  [Lemma 10: Attractor-Repeller](https://www.sciencedirect.com/science/article/pii/S0022314X23002299) and the map $f$ is an $\varepsilon$-perturbation linear of identity described in [Section 4.4: Attractor-Repeller](https://www.sciencedirect.com/science/article/pii/S0022314X23002299) (taking $\varepsilon\leq 1/150$). Moreover to build such $A$ we consider the parameters: $(c,m)=(1/5,8), (1/6,10), (1/8,12)$ and we take 
+ 
+  $$\Delta = \left[(1,0), (-1/2,\alpha), (-1/2,-\alpha)\right] \approx [1,\zeta_3,\zeta_3^2],\qquad \alpha:=\dfrac{2521}{2911},$$ 
 
-   which represents a triangle with vertices in $\mathbb{Q}^2$ in the complex plane $\mathbb{C}$ such that their vertices are an approximation of the unit cubic roots, $\zeta_3=\text{exp}(2\pi i/3)$. 
+ which represents a triangle with vertices in $\mathbb{Q}^2$ in the complex plane $\mathbb{C}$ such that their vertices are an approximation of the unit cubic roots, $\zeta_3=\text{exp}(2\pi i/3)$. 
 
-   Each semi-closed cone $A_i$ ($0\leq i\leq 2$) is given in the same form as in item 3, that is, each $A_i$ is represented by intersection of closed or open half-spaces. In this case, each $A_i$ is given by 5 inequalities.
+ Each semi-closed cone $A_i$ ($0\leq i\leq 2$) is given in the same form as in item 3, that is, each $A_i$ is represented by intersection of closed or open half-spaces. In this case, each $A_i$ is given by 5 inequalities.
 
 5. The fifth entry  $a_5$ of $D_i$ (i.e., $data[i][5]$) has the form  
    $$[\overline{A}_0,\overline{A}_1,\overline{A}_2]$$
