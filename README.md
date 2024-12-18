@@ -45,7 +45,7 @@ with
        of $k$ of order $a_1$, and $b_2$ generator of torsion subgroup of $k$ of order $a_2$ (so $a_2$ divides $a_1$, and $b_1, b_2\in k$)
 
 * $E =$  fundamental unit of $k$. The unit $E$, like all other elements of $k$ below, is given as a polynomial $g$ in $\mathbb{Q}[X]$ 
-       of degree at most $3$. The associated element of $k$ is the class of $g$ in $\mathbb{Q}[X]/(p)$
+       of degree at most $3$. The associated element of $k$ is the class of $g$ in $\mathbb{Q}[X]/(p)$. Moreover, its embedding $E=(E_ 1,E_ 2)$ in $\mathbb{C}\times\mathbb{C}$ satisfy that $|E_1|<1$
        
 * $r =$  is a positive integer such that for torsion of order $2$ or $4$, we can take $r=1$ if its regulator $reg(k)>0.802$, $r=3$ otherwise. For torsion of order $6$, we take $r=1$.  More details see the manuscript MS.
    
