@@ -59,7 +59,7 @@ with
   
   which represents a polyhedral complex of $m$ four-dimensional $k$-rational semi-closed cones:
   
-   $$S:=\left(\bigcup_{j=0}^{m-1}C_j'\right)\cup \left{0\right},\quad C_j':=C_j-C_{j+1} \quad (\text{ taking } j \text{ modulo } m=8,10,12)$$
+   $$S:=\left(\bigcup_{j=0}^{m-1}C_j'\right)\cup \left\{0\right\},\quad C_j':=C_j-C_{j+1} \quad (\text{ taking } j \text{ modulo } m=8,10,12)$$
    
    $$\text{and } \quad C_j:=w^j\cdot\text{Cone}[1,w,w^2,w^3].$$
    
