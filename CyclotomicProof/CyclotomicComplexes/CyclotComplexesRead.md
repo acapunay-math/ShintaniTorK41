@@ -9,7 +9,9 @@
    $$p:=x^4+1,\quad x^4-x^3+x^2-x+1,\quad x^4-x^2+1,$$
 
   respectively. We explicitly show the three complexes of $k$-rational four-dimensional polyhedral cones: 
+  
   $$S:=\bigcup_{j=0}^{m-1} \mathcal{C}_ j,\quad A:=f(P^{\Delta,\Delta}(c)),\quad R:=f(P^{\Delta,\Delta}(d)),$$
+  
  mentioned in the proof of [Lemma II](https://github.com/acapunay-math/ShintaniTorK41/tree/main/CyclotomicProof). Such sets satisfy $A\subset S \subset R$.
 
  The file [Cyclotomicc.txt](https://github.com/acapunay-math/ShintaniTorK41/blob/main/CyclotomicProof/CyclotomicComplexes/Cyclotomicc.txt) is a text file meant to be downloaded and read into PARI GP via the command
