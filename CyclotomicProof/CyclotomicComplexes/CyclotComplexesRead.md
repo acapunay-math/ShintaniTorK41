@@ -57,7 +57,7 @@ with
 
   $$\[C'_0,C'_1,\ldots,C'_{m-1}\],$$
   
-  $$[C'_ 0,\ldots,C'_{m-1}]$$
+  $$[C'_ 0,C'_ 1\ldots,C'_{m-1}]$$
   
   which represents a polyhedral complex of $m$ four-dimensional $k$-rational semi-closed cones:
   
