@@ -1,6 +1,6 @@
 # Cyclotomic Proof
 
-This is a README about the file called: [CycloAlgorithm.gp](https://github.com/acapunay-math/ShintaniTorK41/blob/main/CyclotomicProof/CyclotAlgorithm.gp)
+The [README.md](https://github.com/acapunay-math/ShintaniTorK41/blob/main/CyclotomicProof/README.md) file shows us the proof of two lemmas given below which is based in the file called: [CycloAlgorithm.gp](https://github.com/acapunay-math/ShintaniTorK41/blob/main/CyclotomicProof/CyclotAlgorithm.gp)
 
 ## Two lemmas:
 
