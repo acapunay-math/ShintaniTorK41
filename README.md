@@ -1,15 +1,13 @@
-## Algorithm for explicit Shintani domains for totally complex quartic number fields
+## Shintani domains for totally complex quartic number fields with torsion
 
-This is a README about the files: [YYY](??), [YYY](??)
-
-Let $k$ be a totally complex quartic number field, with $E$ a unit in $k$ of infinite order and $T$ a subgroup of the torsion group of $k$. For the action of the group $G=T\times\langle{E\rangle}$ on $\mathbb{C}^{\ast}\times\mathbb{C}^{\ast}$, we describe below our algorithm to obtain a Shintani (fundamental) domain implemented in [PARI/GP](https://pari.math.u-bordeaux.fr/). By [Shintani's unit theorem](https://en.wikipedia.org/wiki/Shintani%27s_unit_theorem) such a domain is a finite union of (semi-closed) polyhedral cones with generators in $k$. This implementation is based on the manuscript (abbreviated MS)
+Let $k$ be a totally complex quartic number field, with $E$ a unit in $k$ of infinite order and $T$ a subgroup of the torsion group of $k$. For the action of the group $G=T\times\langle{E\rangle}$ on $\mathbb{C}^{\ast}\times\mathbb{C}^{\ast}$, we propose in [YYY](??) an algorithm to obtain Shintani (fundamental) domains, which was implemented in [PARI/GP](https://pari.math.u-bordeaux.fr/). By [Shintani's unit theorem](https://en.wikipedia.org/wiki/Shintani%27s_unit_theorem) such a domain is a finite union of (semi-closed) polyhedral cones with generators in $k$. This implementation is based on the manuscript (abbreviated MS)
 
 [SHINTANI DOMAINS FOR TOTALLY COMPLEX QUARTIC FIELDS WITH TORSION]
 
 by A. CAPUÑAY, M. ESPINOZA AND E. FRIEDMAN, which extend our previous implementation [AlgorithmShitaniDomainK41](https://github.com/acapunay-math/ShintaniK41/tree/main/Algorithm) given for the case when $G=\langle{E\rangle}$ (torsion-free $T$).
 
 
-## File description [ShintaniTorK41.gp](??)
+## Execution
 
 $(I).$ After uploading the file `ShintaniTorK41.gp` in Pari/GP, using an irreducible polynomial $p$ which defines a totally complex quartic number field, then you can use the command
 
