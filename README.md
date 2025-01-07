@@ -1,6 +1,6 @@
 ## Shintani domains for totally complex quartic number fields with torsion
 
-Let $k$ be a totally complex quartic number field, with $E$ a unit in $k$ of infinite order and $T$ a subgroup of the torsion group of $k$. For the action of the group $G=T\times\langle{E\rangle}$ on $\mathbb{C}^{\ast}\times\mathbb{C}^{\ast}$, we propose in [ShintaniTorK41](https://github.com/acapunay-math/ShintaniTorK41/blob/main/ShintaniTorK41.gp) an algorithm to obtain Shintani (fundamental) domains, which was implemented in [PARI/GP](https://pari.math.u-bordeaux.fr/). By [Shintani's unit theorem](https://en.wikipedia.org/wiki/Shintani%27s_unit_theorem) such a domain is a finite union of (semi-closed) polyhedral cones with generators in $k$. This implementation is based on the preprint:
+Let $k$ be a totally complex quartic number field, with $E$ a unit in $k$ of infinite order and $T$ a subgroup of the torsion group of $k$. For the action of the group $G=T\times\langle{E\rangle}$ on $\mathbb{C}^{\ast}\times\mathbb{C}^{\ast}$, we propose in the file [ShintaniTorK41](https://github.com/acapunay-math/ShintaniTorK41/blob/main/ShintaniTorK41.gp) an algorithm to obtain Shintani (fundamental) domains, which was implemented in [PARI/GP](https://pari.math.u-bordeaux.fr/). By [Shintani's unit theorem](https://en.wikipedia.org/wiki/Shintani%27s_unit_theorem) such a domain is a finite union of (semi-closed) polyhedral cones with generators in $k$. This implementation is based on the preprint:
 
 [SHINTANI DOMAINS FOR TOTALLY COMPLEX QUARTIC FIELDS WITH TORSION]
 
@@ -78,13 +78,13 @@ This creates a file called ExamplesShK41 which contains explicit Shintani domain
 
 $(III).$ We show a list of 20 examples of Shintani domains:
 
-* File [ShK41.txt](https://github.com/acapunay-math/ShintaniTorK41/blob/main/ShK41.txt) can be read by PARI/GP via the command
+* File [ExamplesShK41-M.txt](https://github.com/acapunay-math/ShintaniTorK41/blob/main/ExamplesShK41-M.txt) can be read by PARI/GP via the command
 
-        \r ShK41.txt
+        \r ExamplesShK41-M.txt
 
-* File [ShK41-ML.sage](https://github.com/acapunay-math/ShintaniTorK41/blob/main/ShK41-ML.sage) can be read by SAGE-Math via the command 
+* File [ExamplesShK41-ML.sage](https://github.com/acapunay-math/ShintaniTorK41/blob/main/ExamplesShK41-ML.sage) can be read by SAGE-Math via the command 
 
-         load('ShK41-ML.sage')
+         load('ExamplesShK41-ML.sage')
          
 
 In both files returns a list of size 20 as a vector: $examples=[E1,\ldots,E{20}]$ which each $Ej$ has the same structure of vector $F$ described in item $(I)$.
