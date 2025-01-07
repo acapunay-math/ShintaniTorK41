@@ -20,12 +20,12 @@ Here this GP function has one mandatory input $p$, and an optional one, $flag$, 
       
   * $flag = 1$: if you type $torFDK41(p,1)$ you get the same data (with 4 entries) described in [AlgorithmShitaniDomainK41](https://github.com/acapunay-math/ShintaniK41/tree/main/Algorithm) by the command $FDK41(p)$, which returns information of a Shintani domain for action of the group $G=\langle{E\rangle}$ (torsion-free $T$).
   
-  * $flag = m>1$: if you know a priori the order of the torsion group $W$ of $k$, then $m$ is a divisor of the order of $W$. In this case you can type $torFDK41(p,m)$ to obtain a data $F$ about a Shintani domain for the action of $G=W'\times\langle{E\rangle}$, where now $W'$ represents a subgroup of order $m$ of the torsion group $W$ of $k$.
+  * $flag = m>1$: if you know a priori the order of the torsion group $W$ of $k$, then $m$ is a divisor of the order of $W$. In this case you can type $torFDK41(p,m)$ to obtain a data $F$ about a Shintani domain for the action of $G=W'\times\langle{E\rangle}$, where now $W'$ represents a subgroup of order $m$ of the torsion group $W$ of $k$. 
   
   
-So, leaving aside the case $flag=1$, we explain the data obtained in $F$ for the case when $flag=0$ or $flag>1$. This $F$ returns a list of three entries of form $F:=[F_1,F_2,F_3]$ interpreted as follows:
+So, leaving aside the case $flag=1$, we explain the data obtained in $F$ for the case when $flag=0$ or $flag>1$. Moreover, note that $torFDK41(p,|W|)=torFDK41(p)$. This $F$ returns a list of three entries of form $F:=[F_1,F_2,F_3]$ interpreted as follows:
 
-1. The first entry $F_1$ (i.e., $F[1]$) has 10 entries of the form 
+1. The first entry $F_1$ (i.e., $F[1]$) has 9 entries of the form 
 
       $$[t,p,reg,disc,tor,E,r,N,v]$$
 
@@ -42,7 +42,7 @@ with
 * $tor =$ vector of two entries of the form $[t_1,t_2]$, where $t_1=[a_1,b_1]$, $t_2=[a_2,b_2]$, such that $b_1$ generator of torsion group 
        of $k$ of order $a_1$, and $b_2$ generator of torsion subgroup of $k$ of order $a_2$ (so $a_2$ divides $a_1$, and $b_1, b_2\in k$)
 
-* $E =$  fundamental unit of $k$. The unit $E$, like all other elements of $k$ below, is given as a polynomial $g$ in $\mathbb{Q}[X]$ 
+* $E =$  fundamental unit of $k$ used. The unit $E$, like all other elements of $k$ below, is given as a polynomial $g$ in $\mathbb{Q}[X]$ 
        of degree at most $3$. The associated element of $k$ is the class of $g$ in $\mathbb{Q}[X]/(p)$. Moreover, its embedding $E=(E_ 1,E_ 2)$ in $\mathbb{C}\times\mathbb{C}$ satisfy that $|E_1|<1$
        
 * $r =$  is a positive integer such that for torsion of order $2$ or $4$, we can take $r=1$ if its regulator $reg(k)>0.802$, $r=3$ otherwise. For torsion of order $6$, $8$, $10$ or $12$, we can take $r=1$.  More details see the preprint.
