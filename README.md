@@ -45,11 +45,11 @@ with
 * $E =$  fundamental unit of $k$. The unit $E$, like all other elements of $k$ below, is given as a polynomial $g$ in $\mathbb{Q}[X]$ 
        of degree at most $3$. The associated element of $k$ is the class of $g$ in $\mathbb{Q}[X]/(p)$. Moreover, its embedding $E=(E_ 1,E_ 2)$ in $\mathbb{C}\times\mathbb{C}$ satisfy that $|E_1|<1$
        
-* $r =$  is a positive integer such that for torsion of order $2$ or $4$, we can take $r=1$ if its regulator $reg(k)>0.802$, $r=3$ otherwise. For torsion of order $6$, we take $r=1$.  More details see the manuscript MS.
+* $r =$  is a positive integer such that for torsion of order $2$ or $4$, we can take $r=1$ if its regulator $reg(k)>0.802$, $r=3$ otherwise. For torsion of order $6$, $8$, $10$ or $12$, we can take $r=1$.  More details see the preprint.
    
 * $N =$ number of (semi-closed) cones in the Shintani domain constructed 
 
-* $v =$ vector of four entries [#(four-cones),#(three-cones),#(two-cones),#(one-cones)] which describes information of the number semi-closed j-cones (by dimension $j=1,2,3,4$) in a Shintani domain obtained by execution of command:  $torFDK41(p,flag)$. 
+* $v =$ vector of four entries [#(four-cones),#(three-cones),#(two-cones),#(one-cones)] which describes information of the number semi-closed j-dimensional cones (by dimension $j=1,2,3,4$) in a Shintani domain obtained by execution of command:  $torFDK41(p,flag)$. 
 
 
 2. The second entry $F_2$ of $F$ (i.e., $F[2]$) has the form 
@@ -64,17 +64,17 @@ where $v_i=[w,1]$ or $[w,-1]$ and $w$ is an element of $k$ (depending on $i$ and
 
 3. The third entry $F_3$ of $F$ (i.e., $F[3]$) has the form 
 
-      $$[CC_1,CC_2,...,CC_N]$$
+      $$[\overline{C}_1,\overline{C}_2,...,\overline{C}_N]$$
 
-where $CC_j$ is the closure in $\mathbb{R}^4$ of the cone $C_j$ in $F_3$. Each closed cone $CC_j$ is given here by a list of generators in $k$.
+where $\overline{C}_ j$ is the closure in $\mathbb{R}^4$ of the cone $C_ j$ in $F_ 3$. Each closed cone $\overline{C}_ j$ is given here by a list of generators in $k$.
 
 $(II).$ If you want to obtain Shintani domains for a list of (totally complex quartic) polynomials `L`, you can use the command
 
   ```bash
-  ExamplestorK41(L)
+  TorShExamplesK41(L)
   ```
 
-This creates a file with Shintani domains via the command `torFDK41(p)` for each polynomial `p` of the list `L`.
+This creates a file called ExamplesShK41 which contains explicit Shintani domains via the command `torFDK41(p)` for each polynomial `p` of the list `L`.
 
 $(III).$ We show a list of 20 examples of Shintani domains:
 
