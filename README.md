@@ -1,6 +1,6 @@
 ## Shintani domains for totally complex quartic number fields with torsion
 
-Hello githubbb
+Hello githubbb como van
 
 Let $k$ be a totally complex quartic number field, with $E$ a unit in $k$ of infinite order and $T$ a subgroup of the torsion group of $k$. We propose in the file [ShintaniTorK41.gp](https://github.com/acapunay-math/ShintaniTorK41/blob/main/ShintaniTorK41.gp) an algorithm to obtain Shintani (fundamental) domains for the action of the group $G=T\times\langle{E\rangle}$ on $\mathbb{C}^{\ast}\times\mathbb{C}^{\ast}$, which was implemented in [PARI/GP](https://pari.math.u-bordeaux.fr/). By [Shintani's unit theorem](https://en.wikipedia.org/wiki/Shintani%27s_unit_theorem) such a domain is a finite union of (semi-closed) polyhedral cones with generators in $k$. This implementation is based on the preprint:
 
