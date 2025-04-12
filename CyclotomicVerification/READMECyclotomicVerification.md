@@ -38,7 +38,7 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
 
  - **Claim I:** $S$ is a polyhedral complex, and 
  
- $$S=\{0\}\cup \displaystyle\bigcup_{\ell=0}^{m-1} (w^{\ell} \mathcal{C}'_0)=:\{0\}\cup S',$$
+ $$S=\lbrace{0\rbrace}\cup \displaystyle\bigcup_{\ell=0}^{m-1} (w^{\ell} \mathcal{C}'_0)=:\lbrace{0\rbrace}\cup S',$$
  
  this new union is a disjoint union with $\mathcal{C}'_0:=\mathcal{C}_0-(\mathcal{C}_0\cap\mathcal{C}_1)$.
  
@@ -49,7 +49,7 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
 |   $m$  | $u$ |
 |:---------------:| :-------------:|
 |        8 |          $\Theta^2+\Theta+1$ |
-|         10     |     $-\Theta+1$  |      
+|         10     |     $-\Theta+1$  | 
 |     12     |    $-\Theta^3-\Theta^2$ |
 
 </div>
