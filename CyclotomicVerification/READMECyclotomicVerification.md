@@ -37,7 +37,7 @@ $$S:=\displaystyle\bigcup_{j=0}^{m-1} \mathcal{C}_j,\qquad \mathcal{C}_j=w^j\cdo
  **Here we computationally verify the following claims:**
 
  - **Claim I:** $S$ is a polyhedral complex, and 
- $$S=\left\{0\right\}\cup \displaystyle\bigcup_{\ell=0}^{m-1} (w^{\ell} \mathcal{C}'_0)=:\{0\}\cup S',$$
+ $$S=\{0\}\cup \displaystyle\bigcup_{\ell=0}^{m-1} (w^{\ell} \mathcal{C}'_0)=:\{0\}\cup S',$$
  
  this new union is a disjoint union with $\mathcal{C}'_0:=\mathcal{C}_0-(\mathcal{C}_0\cap\mathcal{C}_1)$.
  
