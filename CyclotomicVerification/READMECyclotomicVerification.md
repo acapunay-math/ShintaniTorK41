@@ -1,6 +1,6 @@
 # Cyclotomic Verification
 
-In this [README.md](https://github.com/acapunay-math/ShintaniTorK41/blob/main/CyclotomicProof/README.md) file we verify three claims using an implementation in PARI/GP.
+In this README.md file we verify three claims using an implementation in PARI/GP.
 
 ## Claims:
 
