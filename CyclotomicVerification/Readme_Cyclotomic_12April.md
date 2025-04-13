@@ -1,5 +1,7 @@
 ## Notes on Shintani domain calculations in the  cyclotomic case
 
+hola, alex
+
 This README file describes the computational verification of the three claims made   in section 3 of the manuscript Shintani fundamental domains for   quartic number fields with many  roots of unity by  A. Capuñay, M. Espinoza and E. Friedman. We  will refer to that Ms. as [C/E/F].  The claims involve unions of cones connected to    Shintani domains for  the three quartic cyclotomic fields $k=\mathbb{Q}(\Theta)$, where $\Theta$ is a primitive root of unity of order  $m=8$, 10 or 12. 
 
 
