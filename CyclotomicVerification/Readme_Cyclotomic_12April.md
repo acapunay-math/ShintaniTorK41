@@ -1,11 +1,11 @@
 ## Notes on Shintani domain calculations in the  cyclotomic case
 
-This README file describes the computational verification of the three claims made in Section 3 of the manuscript Shintani fundamental domains for   quartic number fields with many  roots of unity by  A. Capuñay, M. Espinoza and E. Friedman. We  will refer to that Ms. as [C/E/F].  The claims involve unions of cones connected to Shintani domains for  the three quartic cyclotomic fields $k=\mathbb{Q}(\Theta)$ where $\Theta$ is a primitive root of unity of order  $m=8$, 10 or 12. 
+This README file describes the computational verification of the three claims made in Section 3 of the manuscript Shintani fundamental domains for   quartic number fields with many  roots of unity by  A. Capuñay, M. Espinoza and E. Friedman. We  will refer to that Ms. as [C/E/F].  The claims involve unions of cones connected to Shintani domains for  the three quartic cyclotomic fields $k=\mathbb{Q}(\Theta)$, where $\Theta$ is a primitive root of unity of order  $m=8$, 10 or 12. 
 
 
 The first two claims   in need of computer verification  in  Section 3 of  [C/E/F] appear in  display (20) there, while the third one appears on the next to last paragraph of the paper. Namely, 
 
-$$S=\{0\}\cup \bigcup_{\ell=0}^{m-1}(\Theta^\ell\cdot \mathcal{C}_0')  \qquad   \text{(disjoint   union)}, \qquad (*)$$
+$$S=0\cup \bigcup_{\ell=0}^{m-1}(\Theta^\ell\cdot \mathcal{C}_0')  \qquad   \text{(disjoint   union)}, \qquad (*)$$
 
 $$E\cdot S\subset S, \qquad \qquad \qquad\qquad \qquad \quad  (**)$$
 
@@ -16,16 +16,16 @@ with notation as in  display (19) of [C/E/F]. We  will give $\Delta, a$ and $b$ 
  
 ## Overview of the calculations
 
-We first address ($\star\star$) since it is the easiest one. By definition (see display (19) of [C/E/F])   
+We first address ($\ast\ast$) since it is the easiest one. By definition (see display (19) of [C/E/F])   
 $S:= \bigcup_{\ell=0}^{m-1}(\Theta^\ell\cdot \mathcal{C}_0)$ is independent of $E$ and satisfies $\Theta\cdot S=S$. Hence  to verify (**) for any unit of infinite order $E\in k$,  it suffices to do so for  $E=u$ for any generator $u$ of the units of $k$ modulo torsion. This is done using an algorithm giving the difference $E\cdot S-S$ of unions of k-rational cones again as such a difference. \textcolor{red}{SEE FILE XXX}
-This, and other   algorithms  below,   are described in our earlier paper [CEF] Attractor-repeller construction of Shintani domains for totally complex quartic fields, J.\   Number Th.\ \textbf{258} (2024) 146--172. 
+This, and other   algorithms  below,   are described in our earlier paper [CEF] Attractor-repeller construction of Shintani domains for totally complex quartic fields, J.   Number Th. 258 (2024) 146--172. 
 
 
 
-We now address (*). Since the inclusions $0\in S$ and $(\Theta^\ell \cdot \mathcal{C}_0')\subset S$ are obvious from the definition of $S$  in   \S3 of  [ C/E/F], the equality in (*) is verified by checking that
-$$
-\mathcal{C}_0-\bigcup_{\ell=0}^{m-1}(\Theta^\ell\cdot \mathcal{C}_0')=\{0\}.
-$$
+We now address (*). Since the inclusions $0\in S$ and $(\Theta^\ell \cdot \mathcal{C}_0')\subset S$ are obvious from the definition of $S$  in Section 3 of  [ C/E/F], the equality in (*) is verified by checking that
+
+$$ \mathcal{C}_0-\bigcup_{\ell=0}^{m-1}(\Theta^\ell\cdot \mathcal{C}_0')=\{0\}.$$
+
 This is done  using  the algorithm   \textcolor{red}{IN FILE XXX}
 
 
