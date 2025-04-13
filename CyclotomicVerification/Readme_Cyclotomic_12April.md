@@ -5,6 +5,8 @@ This README file describes the computational verification of the three claims ma
 
 
  The first two claims   in need of computer verification  in     \S3 of  [C/E/F] appear in  display (20) there, while the third one appears on the next to last paragraph of the paper. Namely, 
+
+ 
 \begin{align*}  
 &S=\{0\}\cup \bigcup_{\ell=0}^{m-1}(\Theta^\ell\cdot \mathcal{C}_0')  \qquad   \text{(disjoint   union)},  (*)\\ 
 & E\cdot S\subset S,  (**) \\
@@ -12,7 +14,7 @@ This README file describes the computational verification of the three claims ma
 \end{align*}
 
 
-with notation as in  display (19) of [C/E/F]. We  will give $\Delta,a$ and $b$ explicitly. 
+with notation as in  display (19) of [C/E/F]. We  will give $\Delta, a$ and $b$ explicitly. 
 
  
 ## Overview of the calculations
