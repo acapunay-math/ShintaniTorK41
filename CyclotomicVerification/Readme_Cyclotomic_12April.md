@@ -28,19 +28,10 @@ This is done  using  the algorithm   \textcolor{red}{IN FILE XXX}
 
 The notation $P^{\Delta,\Delta}(c)\subset\mathbb{C}\times\mathbb{C}$ is defined in  [CEF,(10)]. For $\Delta$ we take the closed convex set (in fact, a triangle) with vertices 
 
-$$[1,-\frac12+i\frac{2521}{2911},-\frac12-i\frac{2521}{2911}],$$
+$$\Big[1,-\frac12+i\frac{2521}{2911},-\frac12-i\frac{2521}{2911}\Big],$$
 
 where $i:=\sqrt{-1}$ and $\frac{2521}{2911}$ was chosen as a rational approximation of $\sqrt{3}/2$. We first try  the values    
 
-  <div align="center">
-  
-  | $m$ |  $c'$ | $d'$ |
-  | :----------------: | :---: | :--: |
-  | 8 | $1/5$ | $5$ |
-  | 10 | $1/6$ | $4$ |
-  | 12 | $1/8$ | $2$ |
-  
-  </div>
 
 $$
 (c',d'):=
@@ -53,7 +44,6 @@ $$
 \end{cases}
 $$
 
-Unfortunately,  $P^{\Delta,\Delta}(c')$ and $P^{\Delta,\Delta}(d')$ are not $k$-rational (\ie are not a finite union 
- of $k$-rational cones). As our algorithm can only compute with $k$-rational cones, we  cannot directly prove the 
- inclusions (**) above. We therefore find an $\varepsilon$-deformation (see  [CEF,(19)] with  of the identity $f$ with $\varepsilon=1/150$ such that $f\big(P^{\Delta,\Delta}(c')\big)$ and $ f\big(P^{\Delta,\Delta}(d')\big)$ are $k$-rational.  Using \textcolor{red}{FILA YYY} we could thus verify $f\big(P^{\Delta,\Delta}(c')\big)\subset S\subset f\big(P^{\Delta,\Delta}(d')\big)$.
-    Using [CEF, Lemma 15] we  also find a rational pair   \textcolor{red}{$(c,d)$ ESPECIFICAR} such that $  P^{\Delta,\Delta}(c) \subset f\big(P^{\Delta,\Delta}(c')\big)$ and $f\big(P^{\Delta,\Delta}(d')\big) \subset    P^{\Delta,\Delta}(d)$. 
+Unfortunately,  $P^{\Delta,\Delta}(c')$ and $P^{\Delta,\Delta}(d')$ are not $k$-rational (\ie are not a finite union of $k$-rational cones). As our algorithm can only compute with $k$-rational cones, we  cannot directly prove the inclusions (**) above. We therefore find an $\varepsilon$-deformation (see  [CEF,(19)] with  of the identity $f$ with $\varepsilon=1/150$ such that $f\big(P^{\Delta,\Delta}(c')\big)$ and $ f\big(P^{\Delta,\Delta}(d')\big)$ are $k$-rational.  Using \textcolor{red}{FILA YYY} we could thus verify $f\big(P^{\Delta,\Delta}(c')\big)\subset S\subset f\big(P^{\Delta,\Delta}(d')\big)$.
+
+Using [CEF, Lemma 15] we  also find a rational pair \textcolor{red}{$(c,d)$ ESPECIFICAR} such that $  P^{\Delta,\Delta}(c) \subset f\big(P^{\Delta,\Delta}(c')\big)$ and $f\big(P^{\Delta,\Delta}(d')\big) \subset P^{\Delta,\Delta}(d)$. 
