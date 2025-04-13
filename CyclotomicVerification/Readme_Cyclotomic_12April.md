@@ -1,11 +1,11 @@
 ## Notes on Shintani domain calculations in the  cyclotomic case
 
+This README file describes the computational verification of the three claims made in Section 3 of the manuscript Shintani fundamental domains for   quartic number fields with many  roots of unity by  A. Capuñay, M. Espinoza and E. Friedman. We  will refer to that Ms. as [C/E/F].  The claims involve unions of cones connected to Shintani domains for  the three quartic cyclotomic fields $k=\mathbb{Q}(\Theta)$, where $\Theta$ is a primitive root of unity of order  $m=8$, 10 or 12. 
 
-This README file describes the computational verification of the three claims made   in section 3 of the manuscript Shintani fundamental domains for   quartic number fields with many  roots of unity by  A. Capuñay, M. Espinoza and E. Friedman. We  will refer to that Ms. as [C/E/F].  The claims involve unions of cones connected to    Shintani domains for  the three quartic cyclotomic fields $k=\mathbb{Q}(\Theta)$, where $\Theta$ is a primitive root of unity of order  $m=8$, 10 or 12. 
 
+The first two claims   in need of computer verification  in  Section 3 of  [C/E/F] appear in  display (20) there, while the third one appears on the next to last paragraph of the paper. Namely, 
 
- The first two claims   in need of computer verification  in     \S3 of  [C/E/F] appear in  display (20) there, while the third one appears on the next to last paragraph of the paper. Namely, 
-
+$$S=\{0\}\cup \bigcup_{\ell=0}^{m-1}(\Theta^\ell\cdot \mathcal{C}_0')  \qquad   \text{(disjoint   union)}, \quad (*)$$
  
 \begin{align*}  
 &S=\{0\}\cup \bigcup_{\ell=0}^{m-1}(\Theta^\ell\cdot \mathcal{C}_0')  \qquad   \text{(disjoint   union)},  (*)\\ 
