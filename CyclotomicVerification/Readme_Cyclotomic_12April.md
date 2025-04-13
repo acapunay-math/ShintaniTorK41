@@ -21,12 +21,11 @@ $$S:= \bigcup_{\ell=0}^{m-1}(\Theta^\ell\cdot \mathcal{C}_0)$$
 
 is independent of $E$ and satisfies $\Theta\cdot S=S$. Hence  to verify ($\ast\ast$) for any unit of infinite order $E\in k$,  it suffices to do so for  $E=u$ for any generator $u$ of the units of $k$ modulo torsion. This is done using an algorithm giving the difference $E\cdot S-S$ of unions of k-rational cones again as such a difference. \textcolor{red}{SEE FILE XXX} This, and other  algorithms below, are described in our earlier paper [CEF] Attractor-repeller construction of Shintani domains for totally complex quartic fields, J. Number Th. 258 (2024) 146--172. 
 
-We now address ($\ast$). Since the inclusions $0\in S$ and $(\Theta^\ell \cdot \mathcal{C}_0')\subset S$ are obvious from the definition of $S$  in Section 3 of [ C/E/F], the equality in ($\ast$) is verified by checking that
-$$\mathcal{C}_ 0-\bigcup_{\ell=0}^{m-1}(\Theta^\ell\cdot \mathcal{C}_0')=\lbrace{0\rbrace}.$$
+We now address ($\ast$). Since the inclusions $0\in S$ and $(\Theta^\ell\cdot\mathcal{C}_0')\subset S$ are obvious from the definition of $S$ in Section 3 of [ C/E/F], the equality in ($\ast$) is verified by checking that
 
-This is done  using  the algorithm   \textcolor{red}{IN FILE XXX}
+$$\mathcal{C}_ 0-\bigcup_{\ell=0}^{m-1}(\Theta^\ell\cdot \mathcal{C}_ 0')=\lbrace{0\rbrace}.$$
 
-The notation $P^{\Delta,\Delta}(c)\subset\mathbb{C}\times\mathbb{C}$ is defined in  [CEF,(10)]. For $\Delta$ we take the closed convex set (in fact, a triangle) with vertices 
+This is done  using  the algorithm \textcolor{red}{IN FILE XXX}. The notation $P^{\Delta,\Delta}(c)\subset\mathbb{C}\times\mathbb{C}$ is defined in  [CEF,(10)]. For $\Delta$ we take the closed convex set (in fact, a triangle) with vertices 
 
 $$\Big[1,-\frac12+i\frac{2521}{2911},-\frac12-i\frac{2521}{2911}\Big],$$
 
@@ -43,6 +42,14 @@ $$
 \end{cases}
 $$
 
-Unfortunately,  $P^{\Delta,\Delta}(c')$ and $P^{\Delta,\Delta}(d')$ are not $k$-rational (\ie are not a finite union of $k$-rational cones). As our algorithm can only compute with $k$-rational cones, we  cannot directly prove the inclusions (**) above. We therefore find an $\varepsilon$-deformation (see  [CEF,(19)] with  of the identity $f$ with $\varepsilon=1/150$ such that $f\big(P^{\Delta,\Delta}(c')\big)$ and $ f\big(P^{\Delta,\Delta}(d')\big)$ are $k$-rational.  Using \textcolor{red}{FILA YYY} we could thus verify $f\big(P^{\Delta,\Delta}(c')\big)\subset S\subset f\big(P^{\Delta,\Delta}(d')\big)$.
+Unfortunately,  $P^{\Delta,\Delta}(c')$ and $P^{\Delta,\Delta}(d')$ are not $k$-rational (i.e., are not a finite union of $k$-rational cones). As our algorithm can only compute with $k$-rational cones, we  cannot directly prove the inclusions ($\ast\ast$) above. We therefore find an $\varepsilon$-deformation (see [CEF,(19)] with  of the identity $f$ with $\varepsilon=1/150$ such that $f\big(P^{\Delta,\Delta}(c')\big)$ and $ f\big(P^{\Delta,\Delta}(d')\big)$ are $k$-rational.  Using \textcolor{red}{FILA YYY} we could thus verify 
 
-Using [CEF, Lemma 15] we  also find a rational pair \textcolor{red}{$(c,d)$ ESPECIFICAR} such that $  P^{\Delta,\Delta}(c) \subset f\big(P^{\Delta,\Delta}(c')\big)$ and $f\big(P^{\Delta,\Delta}(d')\big) \subset P^{\Delta,\Delta}(d)$. 
+$$f\big(P^{\Delta,\Delta}(c')\big)\subset S\subset f\big(P^{\Delta,\Delta}(d')\big).$$
+
+Using [CEF, Lemma 15] we  also find a rational pair \textcolor{red}{$(c,d)$ ESPECIFICAR} such that 
+
+$$P^{\Delta,\Delta}(c) \subset f\big(P^{\Delta,\Delta}(c')\big)$$
+
+and 
+
+$$f\big(P^{\Delta,\Delta}(d')\big) \subset P^{\Delta,\Delta}(d).$$
