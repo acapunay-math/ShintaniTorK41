@@ -7,15 +7,10 @@ The first two claims   in need of computer verification  in  Section 3 of  [C/E/
 
 $$S=\{0\}\cup \bigcup_{\ell=0}^{m-1}(\Theta^\ell\cdot \mathcal{C}_0')  \qquad   \text{(disjoint   union)}, \quad (*)$$
 
-$$E\cdot S\subset S,  (**)$$
+$$E\cdot S\subset S, \qquad \qquad (**)$$
 
-$$P^{\Delta,\Delta}(c)\subset S\subset P^{\Delta,\Delta}(d),(***)$$
+$$P^{\Delta,\Delta}(c)\subset S\subset P^{\Delta,\Delta}(d),\qquad \qquad (***)$$
 
-\begin{eqnarray}
-a & (*) \\
-b & (**) \\
-c & (***)
-\end{eqnarray}
  
 \begin{align*}  
 &S=\{0\}\cup \bigcup_{\ell=0}^{m-1}(\Theta^\ell\cdot \mathcal{C}_0')  \qquad   \text{(disjoint   union)},  (*)\\ 
