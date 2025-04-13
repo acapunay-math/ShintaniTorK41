@@ -19,7 +19,7 @@ We first address ($\ast\ast$) since it is the easiest one. By definition (see di
 
 $$S:= \bigcup_{\ell=0}^{m-1}(\Theta^\ell\cdot \mathcal{C}_0)$$
 
-is independent of $E$ and satisfies $\Theta\cdot S=S$. Hence  to verify ($\ast\ast$) for any unit of infinite order $E\in k$,  it suffices to do so for  $E=u$ for any generator $u$ of the units of $k$ modulo torsion. This is done using an algorithm giving the difference $E\cdot S-S$ of unions of k-rational cones again as such a difference. SEE FILE XXX This, and other  algorithms below, are described in our earlier paper [CEF] Attractor-repeller construction of Shintani domains for totally complex quartic fields, J. Number Th. 258 (2024) 146--172. 
+is independent of $E$ and satisfies $\Theta\cdot S=S$. Hence  to verify ($\ast\ast$) for any unit of infinite order $E\in k$,  it suffices to do so for  $E=u$ for any generator $u$ of the units of $k$ modulo torsion. This is done using an algorithm giving the difference $E\cdot S-S$ of unions of k-rational cones again as such a difference. SEE FILE XXX This, and other  algorithms below, are described in our earlier paper [CEF] [Attractor-repeller construction of Shintani domains for totally complex quartic fields, J. Number Th. 258 (2024) 146--172](https://www.sciencedirect.com/science/article/abs/pii/S0022314X23002299). 
 
 We now address ($\ast$). Since the inclusions $0\in S$ and $(\Theta^\ell\cdot\mathcal{C}_0')\subset S$ are obvious from the definition of $S$ in Section 3 of [ C/E/F], the equality in ($\ast$) is verified by checking that
 
