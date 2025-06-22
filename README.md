@@ -1,2 +1,0 @@
-# ShintaniTorK41
-
