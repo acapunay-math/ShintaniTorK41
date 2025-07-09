@@ -1,4 +1,4 @@
-\\ Update june 21, 2025
+\\ Update july 03, 2025
  
 \\  For three quartic cyclotomic number fields: "k=bnfinit(p)"
 \\  p=x^4+1 (so it has torsion group of order m=8)
@@ -41,7 +41,7 @@
 \\ we want to verify that L1=C0-(S') is [] which it is interpreted in this case as the vertex {0}
 
 DifConeS(bnf)=
-{my(k,p,m,w,S,S1,C1,L1,v1,h1,h2,l);
+{my(k,p,m,w,S,S1,C1,L0,L1,v1,v2,f,h,h1,h2,l);
 k=bnf; p=k.pol;
 [m,w]=[k.tu[1],lift(k.tu[2])]; \\ order of torsion group m=8, 10, 12, whose generator is "w"
 v1=precision(conjvec(Mod(w,p)),10000); 
@@ -50,10 +50,19 @@ if([h1,h2]==[1,l], w=lift(Mod(w^l,p)));
 S=vector(m,j,lift(Mod(w^(j-1)*[1,w,w^2,w^3],p))); \\The union S of the "m" closed cones given by generators
 S1=vector(m,j,concat(HV(S[j],k),[[1,1,1,1]])); \\ S now given by [generators, inequalities, [1,1,1,1]]
 C1=kcomplex2(S,k);  \\ represent the complex: S' of semi-closed cones
+L0=vector(m-1,j);
+for(j=2,m, 
+   v2=intCones2([C1[1],C1[j]],k); \\ intersection of C1[1] with C1[j], j=2...m
+   [f,h]=[v2[2],v2[3]];
+   if(f==0 && h==0, L0[j-1]=1);
+   );
 L1=[S1[1]];
 for(i=1,#C1, if(#L1>0, L1=kdcomplex(L1,C1[i],k))); \\difference of closed cone C0:=S1[1] with the complex C1=S'
-return(L1[1][1]);  \\ [C0-C1]
+return([L1[1][1], L0]);  \\ L1[1][1]=C0-C1= [](?)
 }
+
+\\Now we need to verify that such union S':= \bigcup w^{j}*C'0 (j=0,1,...,m-1) of semi-closed cones is DISJOINT.
+
 
 
 /************************************************************************************************************/
