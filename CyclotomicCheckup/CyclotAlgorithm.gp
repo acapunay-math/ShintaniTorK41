@@ -29,10 +29,8 @@
 \\    S a polyhedral complex of "m" pointed polyhdral cones, for m=8, 10 or 12.
 \\    can be written as a disjoint union: {0}\cup (\bigcup w^{j}*C'0) for j=0,1,...,m-1
 
-
-\\STEP 1:
 \\ Input: given "bnf=bnfinit(p)", where p = x^4+1, x^4-x^3+x^2-x+1 or x^4-x^2+1 
-\\ Output: return the difference L1:=C0-(S') of closed C0 with S',
+\\ Output: return the difference "C0-(S')" of C0 with S', and a vector [0/1] of size m-1 ,
 \\ since we want to verify that S (union of closed polyhedral cones) can be write as 
 \\ a disjoint union {0}\cup S':= {0}\cup (\bigcup w^{j}*C'0) for j=0,1,...,m-1 (of semi-closed cones)
 \\ It is clear that {0}\cup S' is contained in S
@@ -50,7 +48,7 @@ if([h1,h2]==[1,l], w=lift(Mod(w^l,p)));
 S=vector(m,j,lift(Mod(w^(j-1)*[1,w,w^2,w^3],p))); \\The union S of the "m" closed cones given by generators
 S1=vector(m,j,concat(HV(S[j],k),[[1,1,1,1]])); \\ S now given by [generators, inequalities, [1,1,1,1]]
 C1=kcomplex2(S,k);  \\ represent the complex: S' of semi-closed cones
-L0=vector(m-1,j);
+L0=vector(m-1,j);  
 for(j=2,m, 
    v2=intCones2([C1[1],C1[j]],k); \\ intersection of C1[1] with C1[j], j=2...m
    [f,h]=[v2[2],v2[3]];
@@ -59,10 +57,8 @@ for(j=2,m,
 L1=[S1[1]];
 for(i=1,#C1, if(#L1>0, L1=kdcomplex(L1,C1[i],k))); \\difference of closed cone C0:=S1[1] with the complex C1=S'
 return([L1[1][1], L0]);  \\ L1[1][1]=C0-C1= [](?)
+\\L0=vector of 0/1, which means that the union S' is disjoint, if all returns are 1's.
 }
-
-\\Now we need to verify that such union S':= \bigcup w^{j}*C'0 (j=0,1,...,m-1) of semi-closed cones is DISJOINT.
-
 
 
 /************************************************************************************************************/
@@ -74,7 +70,7 @@ return([L1[1][1], L0]);  \\ L1[1][1]=C0-C1= [](?)
 \\ here we consider: 
 \\   u=x^2+x+1 for m=8,
 \\   u=-x+1 for m=10,
-\\   u=-x^3-x^2 for m=12. All of these have with first embedding of module less than 1.
+\\   u=-x^3-x^2 for m=12. All of these have a modulus less than 1 in their first embedding.
 
 \\ OUTPUT: D=u*S-S, if returns empty, then u*S \subset S, otherwise it's not contained.
 
